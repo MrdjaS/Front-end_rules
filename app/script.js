@@ -1,27 +1,19 @@
 //Search
 
-const searchBtn = document.getElementById('search-btn');
-const searchBtnSmall = document.getElementById('search-btn-small');
+const searchBtn = document.querySelectorAll('.search-btn');
 const searchOverlay = document.getElementById('search-overlay');
-const closeBtn = document.getElementById('close-btn');
-const closeBtnSmall = document.getElementById('close-btn-small');
+const closeBtn = document.querySelectorAll('.close-btn');
 
-searchBtn.addEventListener('click', (e) => {
-    e.preventDefault();
-    searchOverlay.style.display = 'block';
+searchBtn.forEach(item => {
+    item.addEventListener('click', (e) => {
+        e.preventDefault();
+        searchOverlay.style.display = 'block';
+    })
 });
 
-searchBtnSmall.addEventListener('click', (e) => {
-    e.preventDefault();
-    searchOverlay.style.display = 'block';
-});
-
-closeBtn.addEventListener('click', (e) => {
-    e.preventDefault();
-    searchOverlay.style.display = 'none';
-});
-
-closeBtnSmall.addEventListener('click', (e) => {
-    e.preventDefault();
-    searchOverlay.style.display = 'none';
+closeBtn.forEach(item => {
+    item.addEventListener('click', (e) => {
+        e.preventDefault();
+        searchOverlay.style.display = 'none';
+    })
 });
