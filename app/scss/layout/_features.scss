@@ -19,6 +19,10 @@
         @include for-tablet {  
             width: 94.8%;
         }
+
+        @include for-mobile-L {  
+            padding-top: 353px;   
+        }
     }
 
     &__input {
@@ -26,6 +30,9 @@
         width: 100%;
         padding-left: 30px;
         padding-top: 16px;
+        font-weight: 400;
+        font-size: 3.5rem;
+        line-height: 3.6rem;
         border: none;
         border-bottom: 2px solid $Grey;
         background-image: url('../images/search.png');
@@ -36,6 +43,8 @@
             padding-left: 20px;
             width: 708px;
             background-size: 30px 30px;
+            font-size: 2.8rem;
+            line-height: 2.9rem;
         }
 
         @media (max-width:767px) {
@@ -43,7 +52,13 @@
         }
 
         @include for-mobile-L {  
-            width: 335px; 
+            width: 315px;
+            font-size: 1.6rem;
+            line-height: 1.6rem; 
+        }
+
+        @media (max-width:374px) {
+            width: 280px;    
         }
 
         &::placeholder {
@@ -73,6 +88,26 @@
         @include for-tablet {  
             right: 20px;
         }
+
+        @include for-mobile-L {
+            display: none;
+        }
     }
+
+    &__button-close-small {
+        @include btn-search;
+        display: none;
+
+        @include for-mobile-L {
+            display: block;
+            width: 36px;
+            height: 36px;
+            top: 12px;
+            right: 12px;
+        }
+    }
+
+    
+    
 }
 

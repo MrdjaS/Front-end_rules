@@ -18,9 +18,23 @@
         <nav class="navbar">
             <img class="navbar__logo" src="images/Logo.png" alt="Logo"/>
             <div class="navbar__menu">
-                <a class="navbar__item" href="#">About us</a>
+                <a class="navbar__item" href="#">About us
+                    <ul class="navbar__dropdown">
+                        <li>Our company</li>
+                        <li>Our people</li>
+                        <li>Policy & Regulation</li>
+                        <li>Our sponsorship</li>
+                        <li>Our history</li>
+                    </ul>
+                </a>
                 <a class="navbar__item" href="#">Investors</a>
-                <a class="navbar__item" href="#">News & Media</a>
+                <a class="navbar__item" href="#">News & Media
+                    <ul class="navbar__dropdown navbar__dropdown--second">
+                        <li>News releases</li>
+                        <li>Blog</li>
+                        <li>Image library</li>
+                    </ul>
+                </a>
                 <a class="navbar__item" href="#">Contact us</a>
             </div>
             <button class="navbar__search" id="search-btn"><img src="images/search.png" alt="search icon"/></button>
@@ -29,11 +43,16 @@
 
         </nav> 
     </header>
+
+    <section class="hero">
+
+    </section>
     
     <div class="search-overlay" id="search-overlay">
-        <form class="search-overlay__form" action="">
+        <form class="search-overlay__form">
             <input class="search-overlay__input" type="text" placeholder="Search">
             <button class="search-overlay__button-close" id="close-btn"><img src="images/close.png" alt="close icon"/></button>
+            <button class="search-overlay__button-close-small" id="close-btn-small"><img src="images/close-small.png" alt="close icon"/></button>
         </form>
     </div>
     <script src="script.js"></script>
