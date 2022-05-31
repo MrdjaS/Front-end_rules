@@ -1,4 +1,7 @@
 .hero {
     height: 610px;
-    background-color: $Grey;
+    background-image: url('../images/hero.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    object-fit: cover;
 }

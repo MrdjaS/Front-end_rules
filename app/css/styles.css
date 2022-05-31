@@ -294,5 +294,8 @@ header .navbar__hamburger {
 
 .hero {
   height: 610px;
-  background-color: #E5E5E5;
+  background-image: url("../images/hero.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  object-fit: cover;
 }
