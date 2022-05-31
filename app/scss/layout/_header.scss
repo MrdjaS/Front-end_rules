@@ -1,0 +1,239 @@
+header {
+    height: 160px;
+
+    @include for-tablet {    
+        height: 80px;
+    }
+
+    .navbar {
+        height: 160px;
+
+        @include for-tablet {    
+            height: 80px;
+        }
+
+        &__logo {
+            position: absolute;
+            left: 218px;
+            top: 23px;
+
+            @include for-laptop-L {    
+                left: 100px;
+            }
+
+            @include for-laptop {    
+                left: 21.5px;
+            }
+
+            @include for-tablet {    
+                width: 60px;
+                height: 60px;
+                top: 10px;
+            }
+        }
+
+        &__menu {
+            position: absolute;
+            left: 34.4%;
+            height: 160px;
+
+            @include for-laptop-L {    
+                left: 30%;
+            }
+
+            @include for-laptop {    
+                left: 18%;
+            }
+
+            @include for-tablet {    
+                display: none;
+            }
+        }
+
+        &__item {
+            height: 160px;
+            display: table-cell;
+            vertical-align: middle;
+            text-decoration: none;
+            color: $Black;
+            font-size: 2rem;
+            font-weight: 600;
+            line-height: 2rem;
+            padding-left: 15px;
+            padding-right: 15px;
+
+            &:hover {
+                background-color: $Grey;
+            }
+        }
+
+        &__search {
+            @include btn-search;
+            right: 215px;
+            top: 40px;
+            width: 80px;
+            height: 80px;
+
+            @include for-laptop-L {    
+                right: 100px;
+            }
+
+            @include for-laptop {    
+                right: 30px;
+            }
+
+            @include for-tablet {    
+                display: none;
+            }
+        }
+
+        &__search-mobile {
+            @include btn-search;
+            display: none;
+
+            @include for-tablet {  
+                display: inline-block;  
+                width: 30px;
+                height: 60px;
+                top: 10px;
+                right: 80px;
+            }
+
+            @include for-mobile-L {  
+                right: 75px;
+            }
+        }
+
+        &__hamburger {
+            display: none;
+            cursor: pointer;
+            
+
+            @include for-tablet {
+                display: inline-block;
+                position: absolute;
+                top: 30px;
+                right: 20px;
+            }  
+        }
+    }
+
+    .main-menu {
+        list-style:none;
+        height: 50px;
+        margin-left: 393px;
+        margin-top: -60px;
+
+        @media (max-width:1919px) {
+            margin-left: 200px;
+        }
+
+        @media (max-width:1439px) {
+            margin-top: -45px;
+            margin-left: 120px;
+        }
+
+        @media (max-width:768px) {
+            margin-top: 10px;
+            width: 100%;
+            margin-left: 0px;
+            height: 478px;
+        }
+        
+
+        li {
+            display: inline-block;
+            margin-left: 40px;
+            position: relative;
+            top: -15%;
+
+            &:first-child {
+                margin-left: 0px;
+
+                @media (max-width:768px) {
+                    margin-left: 25px;
+                    margin-top: 15px;
+                }
+            }
+
+            @media (max-width:1023px) {
+                top: 0;
+                margin-left: 25px;
+            }
+
+            @media (max-width:768px) {
+                display: flex;
+                margin-left: 25px;
+                margin-top: 40px;
+            }
+        
+            button {
+                margin-left: 130px;
+                width: 218px;
+                height: 48px;
+
+                @media (max-width:1919px) {
+                    margin-left: 50px;
+                }
+
+                @media (max-width:1439px) {
+                    display: none;
+                }
+
+                img {
+                    padding-left: 10px;
+                    padding-bottom: 2px;
+                }
+            }
+            
+            a {
+                font-size: 1.8rem;
+                text-decoration: none;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+
+                @media (max-width:1023px) {
+                    font-size: 1.4rem ;
+                }
+
+                @media (max-width:768px) {
+                    font-size: 2rem;
+                }
+
+            }
+        }
+    }
+}
+
+//Hamburger Menu//
+
+@media (max-width:768px) {
+    header nav .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+    
+    header nav .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+    
+    header nav .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    header nav .main-menu {
+        position: absolute;
+        left: -100%;
+        top:70px;
+        flex-direction: column;
+        gap: 0;
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+    }
+
+    header nav .main-menu.active{
+        left: 0;
+    }
+}

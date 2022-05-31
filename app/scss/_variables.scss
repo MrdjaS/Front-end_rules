@@ -1,0 +1,35 @@
+//Fonts
+$Epilogue: Epilogue, sans-serif;
+
+
+//Colors 
+$Black: #000000;
+$Grey: #E5E5E5;
+$White: #fff;
+
+//Media Queries
+@mixin for-mobile-S {
+  @media (max-width: 320px) { @content; }
+}
+@mixin for-mobile-L {
+  @media (max-width: 425px) { @content; }
+}
+@mixin for-tablet {
+  @media (max-width: 768px) { @content; }
+}
+@mixin for-laptop {
+  @media (max-width: 1024px) { @content; }
+}
+@mixin for-laptop-L {
+  @media (max-width: 1440px) { @content; }
+}
+
+//Buttons
+
+@mixin btn-search {
+  position: absolute;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+

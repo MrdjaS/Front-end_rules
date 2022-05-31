@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Srdjan Mrdja" />
+    <meta name="description" content="Front-end rules" />
+    <meta name="keywords" content="" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Front-end rules</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <img class="navbar__logo" src="images/Logo.png" alt="Logo"/>
+            <div class="navbar__menu">
+                <a class="navbar__item" href="#">About us</a>
+                <a class="navbar__item" href="#">Investors</a>
+                <a class="navbar__item" href="#">News & Media</a>
+                <a class="navbar__item" href="#">Contact us</a>
+            </div>
+            <button class="navbar__search" id="search-btn"><img src="images/search.png" alt="search icon"/></button>
+            <button class="navbar__search-mobile" id="search-btn-small"><img src="images/search-small.png" alt="search icon"/></button>
+            <img class="navbar__hamburger" src="images/menu.png" alt="hamburger menu"/>
+
+        </nav> 
+    </header>
+    
+    <div class="search-overlay" id="search-overlay">
+        <form class="search-overlay__form" action="">
+            <input class="search-overlay__input" type="text" placeholder="Search">
+            <button class="search-overlay__button-close" id="close-btn"><img src="images/close.png" alt="close icon"/></button>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

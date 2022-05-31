@@ -1,0 +1,78 @@
+.search-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    background-color: $White;
+    text-align: center;
+    
+
+    &__form {
+        width: 74.1%;
+        display: block;
+        margin: auto;
+        padding-top: 487px;
+        text-align: center;
+        
+        @include for-tablet {  
+            width: 94.8%;
+        }
+    }
+
+    &__input {
+        height: 50px;
+        width: 100%;
+        padding-left: 30px;
+        padding-top: 16px;
+        border: none;
+        border-bottom: 2px solid $Grey;
+        background-image: url('../images/search.png');
+        background-repeat: no-repeat;
+        background-position: 98%;
+
+        @include for-tablet {  
+            padding-left: 20px;
+            width: 708px;
+            background-size: 30px 30px;
+        }
+
+        @media (max-width:767px) {
+            width: 380px;    
+        }
+
+        @include for-mobile-L {  
+            width: 335px; 
+        }
+
+        &::placeholder {
+            font-weight: 400;
+            font-size: 3.5rem;
+            line-height: 3.6rem;
+
+            @include for-tablet {  
+                font-size: 2.8rem;
+                line-height: 2.9rem;
+            }
+
+            @include for-mobile-L {  
+                font-size: 1.6rem;
+                line-height: 1.6rem;
+            }
+        }
+    }
+
+    &__button-close {
+        @include btn-search;
+        width: 56px;
+        height: 56px;
+        top: 20px;
+        right: 30px;
+
+        @include for-tablet {  
+            right: 20px;
+        }
+    }
+}
+

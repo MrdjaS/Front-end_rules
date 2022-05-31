@@ -1,6 +1,338 @@
-.testing {
-  width: 71.4285714286%;
-  font-size: 20px;
-  display: flex;
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 10px;
+  font-family: Epilogue, sans-serif;
+}
+
+header {
+  height: 160px;
+}
+@media (max-width: 768px) {
+  header {
+    height: 80px;
+  }
+}
+header .navbar {
+  height: 160px;
+}
+@media (max-width: 768px) {
+  header .navbar {
+    height: 80px;
+  }
+}
+header .navbar__logo {
   position: absolute;
+  left: 218px;
+  top: 23px;
+}
+@media (max-width: 1440px) {
+  header .navbar__logo {
+    left: 100px;
+  }
+}
+@media (max-width: 1024px) {
+  header .navbar__logo {
+    left: 21.5px;
+  }
+}
+@media (max-width: 768px) {
+  header .navbar__logo {
+    width: 60px;
+    height: 60px;
+    top: 10px;
+  }
+}
+header .navbar__menu {
+  position: absolute;
+  left: 34.4%;
+  height: 160px;
+}
+@media (max-width: 1440px) {
+  header .navbar__menu {
+    left: 30%;
+  }
+}
+@media (max-width: 1024px) {
+  header .navbar__menu {
+    left: 18%;
+  }
+}
+@media (max-width: 768px) {
+  header .navbar__menu {
+    display: none;
+  }
+}
+header .navbar__item {
+  height: 160px;
+  display: table-cell;
+  vertical-align: middle;
+  text-decoration: none;
+  color: #000000;
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 2rem;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+header .navbar__item:hover {
+  background-color: #E5E5E5;
+}
+header .navbar__search {
+  position: absolute;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  right: 215px;
+  top: 40px;
+  width: 80px;
+  height: 80px;
+}
+@media (max-width: 1440px) {
+  header .navbar__search {
+    right: 100px;
+  }
+}
+@media (max-width: 1024px) {
+  header .navbar__search {
+    right: 30px;
+  }
+}
+@media (max-width: 768px) {
+  header .navbar__search {
+    display: none;
+  }
+}
+header .navbar__search-mobile {
+  position: absolute;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  display: none;
+}
+@media (max-width: 768px) {
+  header .navbar__search-mobile {
+    display: inline-block;
+    width: 30px;
+    height: 60px;
+    top: 10px;
+    right: 80px;
+  }
+}
+@media (max-width: 425px) {
+  header .navbar__search-mobile {
+    right: 75px;
+  }
+}
+header .navbar__hamburger {
+  display: none;
+  cursor: pointer;
+}
+@media (max-width: 768px) {
+  header .navbar__hamburger {
+    display: inline-block;
+    position: absolute;
+    top: 30px;
+    right: 20px;
+  }
+}
+header .main-menu {
+  list-style: none;
+  height: 50px;
+  margin-left: 393px;
+  margin-top: -60px;
+}
+@media (max-width: 1919px) {
+  header .main-menu {
+    margin-left: 200px;
+  }
+}
+@media (max-width: 1439px) {
+  header .main-menu {
+    margin-top: -45px;
+    margin-left: 120px;
+  }
+}
+@media (max-width: 768px) {
+  header .main-menu {
+    margin-top: 10px;
+    width: 100%;
+    margin-left: 0px;
+    height: 478px;
+  }
+}
+header .main-menu li {
+  display: inline-block;
+  margin-left: 40px;
+  position: relative;
+  top: -15%;
+}
+header .main-menu li:first-child {
+  margin-left: 0px;
+}
+@media (max-width: 768px) {
+  header .main-menu li:first-child {
+    margin-left: 25px;
+    margin-top: 15px;
+  }
+}
+@media (max-width: 1023px) {
+  header .main-menu li {
+    top: 0;
+    margin-left: 25px;
+  }
+}
+@media (max-width: 768px) {
+  header .main-menu li {
+    display: flex;
+    margin-left: 25px;
+    margin-top: 40px;
+  }
+}
+header .main-menu li button {
+  margin-left: 130px;
+  width: 218px;
+  height: 48px;
+}
+@media (max-width: 1919px) {
+  header .main-menu li button {
+    margin-left: 50px;
+  }
+}
+@media (max-width: 1439px) {
+  header .main-menu li button {
+    display: none;
+  }
+}
+header .main-menu li button img {
+  padding-left: 10px;
+  padding-bottom: 2px;
+}
+header .main-menu li a {
+  font-size: 1.8rem;
+  text-decoration: none;
+}
+header .main-menu li a:hover {
+  text-decoration: underline;
+}
+@media (max-width: 1023px) {
+  header .main-menu li a {
+    font-size: 1.4rem;
+  }
+}
+@media (max-width: 768px) {
+  header .main-menu li a {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  header nav .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  header nav .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  header nav .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  header nav .main-menu {
+    position: absolute;
+    left: -100%;
+    top: 70px;
+    flex-direction: column;
+    gap: 0;
+    width: 100%;
+    text-align: center;
+    transition: 0.3s;
+  }
+
+  header nav .main-menu.active {
+    left: 0;
+  }
+}
+.search-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  background-color: #fff;
+  text-align: center;
+}
+.search-overlay__form {
+  width: 74.1%;
+  display: block;
+  margin: auto;
+  padding-top: 487px;
+  text-align: center;
+}
+@media (max-width: 768px) {
+  .search-overlay__form {
+    width: 94.8%;
+  }
+}
+.search-overlay__input {
+  height: 50px;
+  width: 100%;
+  padding-left: 30px;
+  padding-top: 16px;
+  border: none;
+  border-bottom: 2px solid #E5E5E5;
+  background-image: url("../images/search.png");
+  background-repeat: no-repeat;
+  background-position: 98%;
+}
+@media (max-width: 768px) {
+  .search-overlay__input {
+    padding-left: 20px;
+    width: 708px;
+    background-size: 30px 30px;
+  }
+}
+@media (max-width: 767px) {
+  .search-overlay__input {
+    width: 380px;
+  }
+}
+@media (max-width: 425px) {
+  .search-overlay__input {
+    width: 335px;
+  }
+}
+.search-overlay__input::placeholder {
+  font-weight: 400;
+  font-size: 3.5rem;
+  line-height: 3.6rem;
+}
+@media (max-width: 768px) {
+  .search-overlay__input::placeholder {
+    font-size: 2.8rem;
+    line-height: 2.9rem;
+  }
+}
+@media (max-width: 425px) {
+  .search-overlay__input::placeholder {
+    font-size: 1.6rem;
+    line-height: 1.6rem;
+  }
+}
+.search-overlay__button-close {
+  position: absolute;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  width: 56px;
+  height: 56px;
+  top: 20px;
+  right: 30px;
+}
+@media (max-width: 768px) {
+  .search-overlay__button-close {
+    right: 20px;
+  }
 }
