@@ -4,4 +4,85 @@
     background-repeat: no-repeat;
     background-position: center;
     object-fit: cover;
+
+    @include for-tablet {  
+        background-image: url('../images/hero-small.png');
+        height: 500px;
+    }
+}
+
+.container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100%;
+
+    @include for-mobile-L {  
+        justify-content: center;
+    }
+}
+
+.hero__section {
+    width: 560px;
+    padding: 30px 20px;
+    background-color: rgba(0, 0, 0, 0.25);
+
+    @include for-laptop {  
+        margin-left: 20px; 
+    }
+
+    @media (max-width:635px) {
+        margin-right: 20px;
+    } 
+
+    @include for-mobile-L {  
+        width: 295px;
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+
+    @include for-mobile-S {  
+        padding: 30px 5px;
+    }
+}
+
+.hero__title {
+    color: $White;
+
+    span {
+        color: $LightGreen;
+        font-size: 5rem;
+        line-height: 5.125rem;
+        font-weight: 700;
+
+        @include for-tablet {  
+            font-size: 4rem;
+            line-height: 4.1rem;
+        }
+    }
+
+    @include for-tablet {  
+        font-size: 4rem;
+        line-height: 4.1rem;
+        height: 98px;
+    }
+
+    @media (max-width:635px) {
+        height: auto;
+    }
+}
+
+.hero__text {
+    color: $White;
+    padding-top: 30px;
+
+    @include for-tablet {  
+        padding-top: 10px;
+        font-size: 2rem;
+        line-height: 3rem;
+    }
+
+    @include for-mobile-L {  
+        padding-top: 14px;
+    }
 }

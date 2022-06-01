@@ -4,3 +4,21 @@
     font-size: 10px;
     font-family: $Epilogue;
 }
+
+.container {
+    max-width: 1230px;
+    width: 100%;
+    margin: auto;
+}
+
+h1 {
+    font-size: 5rem;
+    line-height: 5.125rem;
+    font-weight: 700;
+}
+
+p {
+    font-size: 2.2rem;
+    line-height: 3.2rem;
+    font-weight: 400;
+}
