@@ -161,6 +161,7 @@ header {
     opacity: 0;
     visibility: hidden;
     transition: opacity 200ms ease-in-out;
+    z-index: 2;
 
     @include for-tablet {
         position: relative;

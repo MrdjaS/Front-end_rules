@@ -75,6 +75,9 @@
 .hero__text {
     color: $White;
     padding-top: 30px;
+    font-size: 2.2rem;
+    line-height: 3.2rem;
+    font-weight: 400;
 
     @include for-tablet {  
         padding-top: 10px;

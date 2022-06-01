@@ -1,73 +1,178 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="author" content="Srdjan Mrdja" />
     <meta name="description" content="Front-end rules" />
     <meta name="keywords" content="" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Epilogue:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
     <title>Front-end rules</title>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <div class="container">
-            <nav class="navbar">
-                <img class="navbar__logo" src="images/Logo.png" alt="Logo"/>
-                <ul class="navbar__menu">
-                    <li class="navbar__item navbar__item--expand" href="#">About us
-                        <span class="navbar__triangle"></span>
-                        <ul class="navbar__dropdown">
-                            <li>Our company</li>
-                            <li>Our people</li>
-                            <li>Policy & Regulation</li>
-                            <li>Our sponsorship</li>
-                            <li>Our history</li>
-                        </ul>
-                    </li>
-                    <li class="navbar__item" href="#">Investors</li>
-                    <li class="navbar__item navbar__item--expand" href="#">News & Media
-                        <ul class="navbar__dropdown navbar__dropdown--second">
-                            <span class="navbar__triangle navbar__triangle--secondary"></span>
-                            <li>News releases</li>
-                            <li>Blog</li>
-                            <li>Image library</li>
-                        </ul>
-                    </li>
-                    <li class="navbar__item" href="#">Contact us</li>
-                </ul>
-                <button class="navbar__search search-btn"><img src="images/search.png" alt="search icon"/></button>
-                <button class="navbar__search-mobile search-btn"><img src="images/search-small.png" alt="search icon"/></button>
-                <button class="navbar__close"><img src="images/close-small.png" alt="close icon"/></button>
-                <img class="navbar__hamburger" src="images/menu.png" alt="hamburger menu"/>
-            </nav>
-        </div> 
+      <div class="container">
+        <nav class="navbar">
+          <img class="navbar__logo" src="images/Logo.png" alt="Logo" />
+          <ul class="navbar__menu">
+            <li class="navbar__item navbar__item--expand" href="#">
+              About us
+              <span class="navbar__triangle"></span>
+              <ul class="navbar__dropdown">
+                <li>Our company</li>
+                <li>Our people</li>
+                <li>Policy & Regulation</li>
+                <li>Our sponsorship</li>
+                <li>Our history</li>
+              </ul>
+            </li>
+            <li class="navbar__item" href="#">Investors</li>
+            <li class="navbar__item navbar__item--expand" href="#">
+              News & Media
+              <ul class="navbar__dropdown navbar__dropdown--second">
+                <span
+                  class="navbar__triangle navbar__triangle--secondary"
+                ></span>
+                <li>News releases</li>
+                <li>Blog</li>
+                <li>Image library</li>
+              </ul>
+            </li>
+            <li class="navbar__item" href="#">Contact us</li>
+          </ul>
+          <button class="navbar__search search-btn">
+            <img src="images/search.png" alt="search icon" />
+          </button>
+          <button class="navbar__search-mobile search-btn">
+            <img src="images/search-small.png" alt="search icon" />
+          </button>
+          <button class="navbar__close">
+            <img src="images/close-small.png" alt="close icon" />
+          </button>
+          <img
+            class="navbar__hamburger"
+            src="images/menu.png"
+            alt="hamburger menu"
+          />
+        </nav>
+      </div>
     </header>
 
-    <section class="hero">
+    <main>
+      <section class="hero">
         <div class="container">
-            <div class="hero__section">
-                <h1 class="hero__title">Donec <span>condimentum</span> viverra ante</h1>
-                <p class="hero__text">
-                    Nullam molestie elit vel massa accumsan lacinia. 
-                    Aliquam faucibus sapien ante, eu cursus risus rutrum sit amet.
-                     Pellentesque at vehicula lacus.
-                </p>
-            </div>
+          <div class="hero__section">
+            <h1 class="hero__title">
+              Donec <span>condimentum</span> viverra ante
+            </h1>
+            <p class="hero__text">
+              Nullam molestie elit vel massa accumsan lacinia. Aliquam faucibus
+              sapien ante, eu cursus risus rutrum sit amet. Pellentesque at
+              vehicula lacus.
+            </p>
+          </div>
         </div>
-    </section>
-    
+      </section>
+
+      <section class="under-hero">
+        <div class="container under-hero__section">
+          <div class="under-hero__content">
+            <h2 class="under-hero__title">Suspendisse vitae purus quis dui</h2>
+            <p class="under-hero__text">
+              Nam a augue eu ipsum accumsan pretium. Proin ut dolor id arcu
+              dignissim dictum. Aenean laoreet, felis vel dapibus interdum,
+              turpis nunc congue tellus, sed ultricies lorem nulla eget diam.
+            </p>
+            <button class="under-hero__button">Fusce blandit</button>
+          </div>
+          <img
+            class="under-hero__img"
+            src="images/under-hero.png"
+            alt="under hero image"
+          />
+          <img
+            class="under-hero__img--small"
+            src="images/under-hero-small.png"
+            alt="under hero image"
+          />
+        </div>
+      </section>
+
+      <section class="slider">
+        <div class="container slider__container">
+          <h2 class="slider__title">Sed ultricies lorem</h2>
+          <div class="slider__content" id="slider-content">
+            <div class="slider__card">
+              <img src="images/slider1.png" />
+              <h3 class="slider__heading">Maecenas</h3>
+              <p class="slider__text">Proin ullamcorper fermentum quam</p>
+              <time class="slider__time" datetime="2021-11-05">
+                  05 November 2021
+                </time>
+            </div>
+            <div class="slider__card">
+              <img src="images/slider2.png" />
+              <h3 class="slider__heading">feugiat</h3>
+              <p class="slider__text">
+                Quisque cursus ornare mi malesuada porttitor
+              </p>
+              <time class="slider__time" datetime="2021-11-05"
+                >05 November 2021
+                </time>
+            </div>
+
+            <div class="slider__card">
+                <img src="images/slider2.png" />
+                <h3 class="slider__heading">feugiat</h3>
+                <p class="slider__text">
+                  Quisque cursus ornare mi malesuada porttitor
+                </p>
+                <time class="slider__time" datetime="2021-11-05"
+                  >05 November 2021
+                  </time>
+              </div>
+
+            <div class="slider__card">
+                <img src="images/slider1.png" />
+                <h3 class="slider__heading">Maecenas</h3>
+                <p class="slider__text">Proin ullamcorper fermentum quam</p>
+                <time class="slider__time" datetime="2021-11-05">
+                    05 November 2021
+                  </time>
+              </div>
+          </div>
+          <button class="slider__button slider__button--primary" id="btn-prev">
+            <img src="images/keyboard_arrow_left.png" alt="arrow left" />
+          </button>
+          <button class="slider__button slider__button--secondary" id="btn-next">
+            <img src="images/keyboard_arrow_right.png" alt="arrow right" />
+          </button>
+        </div>
+        
+      </section>
+    </main>
+
     <div class="search-overlay" id="search-overlay">
-        <form class="search-overlay__form">
-            <input class="search-overlay__input" type="text" placeholder="Search">
-            <button class="search-overlay__button-close close-btn" id="close-btn"><img src="images/close.png" alt="close icon"/></button>
-            <button class="search-overlay__button-close-small close-btn" id="close-btn-small"><img src="images/close-small.png" alt="close icon"/></button>
-        </form>
+      <form class="search-overlay__form">
+        <input class="search-overlay__input" type="text" placeholder="Search" />
+        <button class="search-overlay__button-close close-btn" id="close-btn">
+          <img src="images/close.png" alt="close icon" />
+        </button>
+        <button
+          class="search-overlay__button-close-small close-btn"
+          id="close-btn-small"
+        >
+          <img src="images/close-small.png" alt="close icon" />
+        </button>
+      </form>
     </div>
     <script src="js/script.js"></script>
-</body>
+  </body>
 </html>

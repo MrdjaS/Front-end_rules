@@ -17,10 +17,10 @@ h1 {
   font-weight: 700;
 }
 
-p {
-  font-size: 2.2rem;
-  line-height: 3.2rem;
-  font-weight: 400;
+h2 {
+  font-size: 4rem;
+  line-height: 5rem;
+  font-weight: 700;
 }
 
 header {
@@ -192,6 +192,7 @@ header {
   opacity: 0;
   visibility: hidden;
   transition: opacity 200ms ease-in-out;
+  z-index: 2;
 }
 @media (max-width: 768px) {
   .navbar__dropdown {
@@ -500,6 +501,9 @@ header {
 .hero__text {
   color: #fff;
   padding-top: 30px;
+  font-size: 2.2rem;
+  line-height: 3.2rem;
+  font-weight: 400;
 }
 @media (max-width: 768px) {
   .hero__text {
@@ -512,4 +516,240 @@ header {
   .hero__text {
     padding-top: 14px;
   }
+}
+
+.under-hero {
+  height: 480px;
+  display: flex;
+}
+@media (max-width: 1023px) {
+  .under-hero {
+    height: 410px;
+  }
+}
+@media (max-width: 767px) {
+  .under-hero {
+    height: 600px;
+  }
+}
+
+.under-hero__section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  height: 100%;
+}
+@media (max-width: 767px) {
+  .under-hero__section {
+    flex-direction: column-reverse;
+    justify-content: center;
+    height: 500px;
+  }
+}
+
+.under-hero__content {
+  width: 530px;
+  height: 340px;
+}
+@media (max-width: 1024px) {
+  .under-hero__content {
+    width: 380px;
+    margin-left: 20px;
+  }
+}
+@media (max-width: 767px) {
+  .under-hero__content {
+    margin-left: 0px;
+  }
+}
+@media (max-width: 425px) {
+  .under-hero__content {
+    width: 335px;
+  }
+}
+@media (max-width: 374px) {
+  .under-hero__content {
+    width: 300px;
+  }
+}
+
+.under-hero__title {
+  color: #318C8C;
+}
+@media (max-width: 1024px) {
+  .under-hero__title {
+    font-size: 3rem;
+    line-height: 4rem;
+  }
+}
+@media (max-width: 767px) {
+  .under-hero__title {
+    margin-top: 20px;
+  }
+}
+@media (max-width: 425px) {
+  .under-hero__title {
+    font-size: 2.6rem;
+    line-height: 3.2rem;
+  }
+}
+
+.under-hero__text {
+  margin-top: 30px;
+  font-size: 2rem;
+  line-height: 3rem;
+  font-weight: 400;
+  color: #575756;
+}
+@media (max-width: 1024px) {
+  .under-hero__text {
+    font-size: 1.8rem;
+    line-height: 2.8rem;
+  }
+}
+@media (max-width: 767px) {
+  .under-hero__text {
+    margin-top: 10px;
+  }
+}
+@media (max-width: 425px) {
+  .under-hero__text {
+    font-size: 1.6rem;
+    line-height: 2.6rem;
+  }
+}
+
+.under-hero__button {
+  margin-top: 40px;
+  padding: 10px 16px;
+  font-size: 2rem;
+  line-height: 3rem;
+  font-weight: 700;
+  color: #fff;
+  border: none;
+  background-color: #F05A28;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.under-hero__button:hover {
+  color: #F05A28;
+  background-color: #fff;
+  border: 1px solid #F05A28;
+}
+@media (max-width: 767px) {
+  .under-hero__button {
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .under-hero__img {
+    margin-right: 20px;
+  }
+}
+@media (max-width: 1023px) {
+  .under-hero__img {
+    display: none;
+  }
+}
+
+.under-hero__img--small {
+  display: none;
+  margin-right: 20px;
+}
+@media (max-width: 1023px) {
+  .under-hero__img--small {
+    display: inline-block;
+  }
+}
+@media (max-width: 767px) {
+  .under-hero__img--small {
+    margin-right: 0px;
+    width: 335px;
+    height: 215px;
+  }
+}
+@media (max-width: 374px) {
+  .under-hero__img--small {
+    width: 300px;
+    height: 193px;
+  }
+}
+
+.slider {
+  height: 864px;
+  background-color: #F1F1F1;
+}
+
+.slider__container {
+  display: flex;
+  align-items: flex-start;
+}
+
+.slider__title {
+  position: absolute;
+  top: 70px;
+  font-size: 4rem;
+  line-height: 5rem;
+  color: #318C8C;
+}
+
+.slider__content {
+  max-width: 1230px;
+  width: 200%;
+  margin-top: 150px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  overflow: hidden;
+}
+
+.slider__card {
+  max-width: 580px;
+  width: 100%;
+  margin-right: 70px;
+}
+.slider__card:last-of-type {
+  margin-right: 0px;
+}
+
+.slider__heading {
+  font-size: 1.6rem;
+  line-height: 1.6rem;
+  letter-spacing: 0.3rem;
+  color: #F05A28;
+  font-weight: 700;
+  margin-top: 44px;
+  text-transform: uppercase;
+}
+
+.slider__text {
+  font-size: 2.6rem;
+  line-height: 3.4rem;
+  color: #575756;
+  font-weight: 700;
+  margin-top: 20px;
+}
+
+.slider__time {
+  display: inline-block;
+  margin-top: 20px;
+  font-size: 1.6rem;
+  line-height: 1.6rem;
+  color: #575756;
+}
+
+.slider__button {
+  position: absolute;
+  bottom: 68px;
+  width: 80px;
+  height: 80px;
+  border: 1px solid #575756;
+  border-radius: 40px;
+  cursor: pointer;
+}
+
+.slider__button--secondary {
+  left: 90px;
 }

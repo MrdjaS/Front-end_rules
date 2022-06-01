@@ -33,11 +33,6 @@ hamburger.addEventListener('click',() => {
     search.style.display = 'none';
     hamburger.style.display = 'none';
     closeBtnMobile.style.display = 'inline-block';
-
-    if(width > 768) {
-        search.style.display = 'none';
-        hamburger.style.display = 'none';
-    }
 });
 
 closeBtnMobile.addEventListener('click',() => {
@@ -47,5 +42,21 @@ closeBtnMobile.addEventListener('click',() => {
     hamburger.style.display = 'inline-block';
     closeBtnMobile.style.display = 'none';
 });
+
+//Slider 
+
+const slider = document.getElementById('slider-content');
+const btnPrev = document.getElementById('btn-prev');
+const btnNext = document.getElementById('btn-next');
+const card = document.getElementsByClassName('slider__card');
+
+btnNext.addEventListener('click', () => {
+    slider.append(card[0]);
+});
+
+btnPrev.addEventListener('click', () => {
+    slider.prepend(card[card.length - 1]);
+})
+
 
 

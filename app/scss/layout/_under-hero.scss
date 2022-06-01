@@ -1,0 +1,141 @@
+.under-hero {
+    height: 480px;
+    display: flex;
+
+    @media (max-width:1023px) {
+        height: 410px;
+    }
+
+    @media (max-width:767px) {
+        height: 600px;
+    }
+}
+
+.under-hero__section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    height: 100%;
+
+    @media (max-width:767px) {
+        flex-direction: column-reverse;
+        justify-content: center;
+        height: 500px;
+    }
+}
+
+.under-hero__content {
+    width: 530px;
+    height: 340px;
+
+    @include for-laptop {  
+        width: 380px;
+        margin-left: 20px;
+    }
+
+    @media (max-width:767px) {
+        margin-left: 0px;
+    }
+
+    @include for-mobile-L {  
+        width: 335px;
+    }
+
+    @media (max-width:374px) {
+        width: 300px;
+    }
+}
+
+.under-hero__title {
+    color: $Green;
+
+    @include for-laptop {  
+        font-size: 3rem;
+        line-height: 4rem;
+    }
+
+    @media (max-width:767px) {
+        margin-top: 20px;
+    }
+
+    @include for-mobile-L {  
+        font-size: 2.6rem;
+        line-height: 3.2rem;
+    }
+}
+
+.under-hero__text {
+    margin-top: 30px;
+    font-size: 2rem;
+    line-height: 3rem;
+    font-weight: 400;
+    color: $DarkGrey;
+
+    @include for-laptop {  
+        font-size: 1.8rem;
+        line-height: 2.8rem;
+    }
+
+    @media (max-width:767px) {
+        margin-top: 10px;
+    }
+
+    @include for-mobile-L {  
+        font-size: 1.6rem;
+        line-height: 2.6rem;
+    }
+}
+
+.under-hero__button {
+    margin-top: 40px;
+    padding: 10px 16px;
+    font-size: 2rem;
+    line-height: 3rem;
+    font-weight: 700;
+    color: $White;
+    border: none;
+    background-color: $Orange;
+    border-radius: 5px;
+    cursor: pointer;
+
+    &:hover {
+        color: $Orange;
+        background-color: $White;
+        border: 1px solid $Orange;
+    }
+
+    @media (max-width:767px) {
+        margin-top: 10px;
+    }
+}
+
+.under-hero__img {
+    @include for-laptop {  
+        margin-right: 20px;
+    }
+
+    @media (max-width:1023px) {
+        display: none;
+    }
+}
+
+.under-hero__img--small {
+    display: none;
+    margin-right: 20px;
+
+    @media (max-width:1023px) {
+        display: inline-block;
+    }
+
+    @media (max-width:767px) {
+        margin-right: 0px;
+        width: 335px;
+        height: 215px;
+    }
+
+    @media (max-width:374px) {
+        width: 300px;
+        height: 193px;
+    }
+}
