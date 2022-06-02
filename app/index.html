@@ -22,10 +22,11 @@
         <nav class="navbar">
           <img class="navbar__logo" src="images/Logo.png" alt="Logo" />
           <ul class="navbar__menu">
-            <li class="navbar__item navbar__item--expand" href="#">
-              About us
+            <li class="navbar__item navbar__item--expand" id="navbar-dropdown-first">
+              <a href="#">About us</a>
+              <img class="navbar__arrow" src="images/keyboard_arrow_right_small.png" id="navbar-arrow"/>
               <span class="navbar__triangle"></span>
-              <ul class="navbar__dropdown">
+              <ul class="navbar__dropdown" id="navbar-dropdown-first-list">
                 <li>Our company</li>
                 <li>Our people</li>
                 <li>Policy & Regulation</li>
@@ -33,20 +34,20 @@
                 <li>Our history</li>
               </ul>
             </li>
-            <li class="navbar__item" href="#">Investors</li>
-            <li class="navbar__item navbar__item--expand" href="#">
-              News & Media
-              <ul class="navbar__dropdown navbar__dropdown--second">
-                <span
-                  class="navbar__triangle navbar__triangle--secondary"
-                ></span>
+            <li class="navbar__item"><a href="#">Investors</a></li>
+            <li class="navbar__item navbar__item--expand" id="navbar-dropdown-second">
+              <a href="#">News & Media</a>
+              <img class="navbar__arrow navbar__arrow--secondary" src="images/keyboard_arrow_right_small.png" id="navbar-arrow-second"/>
+              <span class="navbar__triangle navbar__triangle--secondary"></span>
+              <ul class="navbar__dropdown navbar__dropdown--second" id="navbar-dropdown-second-list"> 
                 <li>News releases</li>
                 <li>Blog</li>
                 <li>Image library</li>
               </ul>
             </li>
-            <li class="navbar__item" href="#">Contact us</li>
+            <li class="navbar__item"><a href="#">Contact us</a></li>
           </ul>
+        </nav>
           <button class="navbar__search search-btn">
             <img src="images/search.png" alt="search icon" />
           </button>
@@ -61,7 +62,7 @@
             src="images/menu.png"
             alt="hamburger menu"
           />
-        </nav>
+        
       </div>
     </header>
 

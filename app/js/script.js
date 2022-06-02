@@ -7,7 +7,7 @@ const closeBtn = document.querySelectorAll('.close-btn');
 searchBtn.forEach(item => {
     item.addEventListener('click', (e) => {
         e.preventDefault();
-        searchOverlay.style.display = 'block';
+        searchOverlay.style.display = 'flex';
     })
 });
 
@@ -58,5 +58,37 @@ btnPrev.addEventListener('click', () => {
     slider.prepend(card[card.length - 1]);
 })
 
+// Dropdown 
 
+const dropDownFirstItem = document.getElementById('navbar-dropdown-first');
+const dropDownSecondItem = document.getElementById('navbar-dropdown-second');
 
+const arrowFirstItem = document.getElementById('navbar-arrow');
+const arrowSecondItem = document.getElementById('navbar-arrow-second');
+
+const dropDownFirstList = document.getElementById('navbar-dropdown-first-list');
+const dropDownSecondList = document.getElementById('navbar-dropdown-second-list');
+
+let countFirst = 0;
+
+dropDownFirstItem.addEventListener('click', () => {
+    dropDownFirstList.classList.toggle('navbar__dropdown--active');
+    countFirst++;
+    if(countFirst%2 !== 0 || countFirst === 0) {
+        arrowFirstItem.style.transform = `rotate(90deg)`;
+    } else {
+        arrowFirstItem.style.transform = `rotate(0deg)`;
+    }
+});
+
+let countSecond = 0;
+
+dropDownSecondItem.addEventListener('click', () => {
+    dropDownSecondList.classList.toggle('navbar__dropdown--active');
+    countSecond++;
+    if(countSecond%2 !== 0 || countSecond === 0) {
+        arrowSecondItem.style.transform = `rotate(90deg)`;
+    } else {
+        arrowSecondItem.style.transform = `rotate(0deg)`;
+    }
+});

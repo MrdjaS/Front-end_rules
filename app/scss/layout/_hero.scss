@@ -3,7 +3,12 @@
     background-image: url('../images/hero.png');
     background-repeat: no-repeat;
     background-position: center;
+    background-size: 100%;
     object-fit: cover;
+
+    @media (max-width:1660px) {
+        background-size: cover;
+    } 
 
     @include for-tablet {  
         background-image: url('../images/hero-small.png');

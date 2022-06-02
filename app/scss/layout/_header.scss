@@ -11,17 +11,25 @@ header {
 }
 
 .navbar {
-    height: 160px;
+    display: flex;
+    max-width: 913.5px;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
 
-    @include for-tablet {    
-        height: 80px;
+    @include for-laptop {
+        justify-content: flex-start;    
+        margin-left: 10px;
+    }
+
+    @include for-tablet { 
+        margin-left: 21.5px;
     }
 }
 
 .navbar__logo {
-    position: absolute;
-    left: 0px;
-    top: 23px;
+    width: 120px;
+    height: 120px;
 
     @include for-laptop-L {    
         left: 100px;
@@ -39,19 +47,6 @@ header {
 }
 
 .navbar__menu {
-    position: absolute;
-    display: inline-block;
-    left: 354px;
-    height: 160px;
-
-    @include for-laptop-L {    
-        left: 30%;
-    }
-
-    @include for-laptop {    
-        left: 18%;
-    }
-
     @include for-tablet {
         display: block;
         width: 100%;
@@ -82,8 +77,12 @@ header {
     border-right: 10px solid transparent;
     border-bottom: 20px solid white;
     position: absolute;
+    left: 400px;
     top: 140px;
-    left: 51px;
+
+    @include for-laptop {
+        left: 180px;
+    }
 
     @include for-tablet {
         display: none;
@@ -92,15 +91,32 @@ header {
 
 .navbar__triangle--secondary {
     position: absolute;
-    top: -20px;
-    left: 140px;
+    top: 140px;
+    left: 675px;
+
+    @include for-laptop {
+        left: 455px;
+    }
+}
+
+.navbar__arrow {
+    display: none;
+    position: absolute;
+    right: 16px;
+    top: 40px;
+
+    @include for-tablet {
+        display: block;
+    }
+}
+
+.navbar__arrow--secondary {
+    top: 30px;
 }
 
 .navbar__item {
-    height: 160px;
     cursor: pointer;
-    display: table-cell;
-    vertical-align: middle;
+    display: inline-block;
     text-decoration: none;
     color: $Black;
     font-size: 2rem;
@@ -119,15 +135,29 @@ header {
         opacity: 1;
     }
 
+    &:first-of-type {
+        a {
+            @include for-tablet {
+                padding: 40px 0 29px 20px;
+            }
+        }
+    }
+
+    @media (min-width:768px) {
+        &:hover ul{
+            visibility: visible;
+            opacity: 1;
+        }
+    } 
+
     @include for-tablet {
         position: relative;
         display: inline-block;
-        width: 90.24%;
-        height: 47px;
-        padding-top: 30px;
-        padding-left: 20px;
+        max-width: 688px;
+        width: 100%;
+        height: auto;
         margin-left: 20px;
-        margin-right: 20px;
+        padding: 0 40px 0 0;
         border-bottom: 2px solid $Grey;
 
         &:hover {
@@ -135,10 +165,23 @@ header {
         }
     }
 
-    &:first-of-type {
+    @media (max-width:767px) {
+        width: 85%;
+    } 
+
+    a {
+        display: inline-block;
+        text-decoration: none;
+        font-size: 2rem;
+        font-weight: 600;
+        line-height: 2rem;
+        color: $Black;
+        padding: 70px 0;
+
         @include for-tablet {
-            padding-top: 40px;
+            padding: 30px 0px 26px 20px;
         }
+
     }
 }
 
@@ -151,7 +194,7 @@ header {
     position: absolute;
     list-style-type: none;
     top: 160px;
-    left: -90px;
+    left: 260px;
     display: flex;
     flex-direction: column;
     width: 300px;
@@ -163,11 +206,17 @@ header {
     transition: opacity 200ms ease-in-out;
     z-index: 2;
 
+    @include for-laptop {
+        left: 40px;
+    }
+
     @include for-tablet {
         position: relative;
         top: 0px;
         left: 0px;
         height: auto;
+        text-align: left;
+        display: none;
     }
 
     li {
@@ -177,15 +226,42 @@ header {
         text-align: center;
         margin-top: 30px;
 
+        @include for-tablet {
+            text-align: left;
+            margin-left: 40px;
+            margin-top: 22px;
+        }
+
         &:first-of-type {
             margin-top: 40px;
+
+            @include for-tablet {
+                margin-top: 0px;
+            }
         }
+
+        &:last-of-type {
+            @include for-tablet {
+                margin-bottom: 29px;
+            }
+        }
+
+        
     }
 }
 
 .navbar__dropdown--second {
-    left: 180px;
+    left: 535px;
     height: 191px;
+
+    @include for-laptop {
+        left: 315px;
+    }
+
+    @include for-tablet {
+        left: 0;
+        height: auto;
+    }
 }
 
 .navbar__search {
@@ -248,4 +324,8 @@ header {
         top: 29px;
         right: 24px;
     } 
+}
+
+.navbar__dropdown--active {
+    display: flex;
 }
