@@ -50,13 +50,14 @@ const btnPrev = document.getElementById('btn-prev');
 const btnNext = document.getElementById('btn-next');
 const card = document.getElementsByClassName('slider__card');
 
+
 btnNext.addEventListener('click', () => {
     slider.append(card[0]);
 });
 
 btnPrev.addEventListener('click', () => {
     slider.prepend(card[card.length - 1]);
-})
+});
 
 // Dropdown 
 
