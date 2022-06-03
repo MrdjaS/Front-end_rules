@@ -1,7 +1,9 @@
-@import "variables";
-@import "layout/base";
-@import "layout/header";
-@import "layout/features";
-@import "layout/hero";
-@import "layout/under-hero";
-@import "layout/slider";
+@import "config/variables";
+@import "config/reset";
+@import "base/layout";
+@import "base/typography";
+@import "modules/header";
+@import "modules/search";
+@import "modules/hero";
+@import "modules/under-hero";
+@import "modules/slider";

@@ -28,7 +28,7 @@
 }
 
 .hero__section {
-    width: 560px;
+    width: 600px;
     padding: 30px 20px;
     background-color: rgba(0, 0, 0, 0.25);
 
@@ -41,12 +41,13 @@
     } 
 
     @include for-mobile-L {  
-        width: 295px;
+        width: 335px;
         margin-left: 0px;
         margin-right: 0px;
     }
 
     @include for-mobile-S {  
+        width: 300px;
         padding: 30px 5px;
     }
 }

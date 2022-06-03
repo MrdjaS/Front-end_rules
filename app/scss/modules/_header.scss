@@ -134,15 +134,6 @@ header {
     padding-right: 15px;
     transition: background-color 200ms ease-in-out;
 
-    &:hover {
-        background-color: $Grey;
-    }
-
-    &:hover ul{
-        visibility: visible;
-        opacity: 1;
-    }
-
     &:first-of-type {
         a {
             @include for-tablet {
@@ -155,22 +146,31 @@ header {
         }
     }
 
-    @media (min-width:768px) {
+    @media (min-width:769px) {
+        &:hover {
+            background-color: $Grey;
+        }
+    
         &:hover ul{
             visibility: visible;
             opacity: 1;
         }
-    } 
+    }
 
     @include for-tablet {
         position: relative;
         display: inline-block;
-        max-width: 688px;
+        max-width: 728px;
         width: 100%;
         height: auto;
         margin-left: 20px;
         padding: 0 40px 0 0;
         border-bottom: 2px solid $Grey;
+
+        & ul{
+            visibility: visible;
+            opacity: 1;
+        }
 
         &:hover {
             background-color: transparent;
@@ -178,18 +178,18 @@ header {
     }
 
     @media (max-width:767px) {
-        width: 85%;
+        width: 90%;
     }
     
     @include for-mobile-L {
-        max-width: 295px;
+        max-width: 335px;
         width: 100%;
         margin-right: 20px;
         text-align: left;
     }
 
     @media (max-width:374px) {
-        max-width: 250px;
+        max-width: 280px;
         width: 100%;
     }
 

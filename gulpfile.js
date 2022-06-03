@@ -3,6 +3,7 @@ const sass = require('gulp-sass')(require('sass'));
 const gulpStylelint = require('gulp-stylelint');
 const autoprefixer = require('gulp-autoprefixer');
 const iconfont = require('gulp-iconfont');
+const iconfontCss = require('gulp-iconfont-css');
 const runTimestamp = Math.round(Date.now()/1000);
 
 gulp.task('sass', function() {
@@ -28,20 +29,22 @@ gulp.task('autoprefix', function() {
         .pipe(gulp.dest('app/css'));
 });
 
-gulp.task('iconfont', function() {
-    return gulp.src(['app/images/*.svg'])
-    .pipe(iconfont({
-      fontName: 'myfont',
-      prependUnicode: true,
-      formats: ['ttf', 'eot', 'woff'],
-      timestamp: runTimestamp,
-    }))
-      .on('glyphs', function(glyphs, options) {
-        // CSS templating, e.g.
-        console.log(glyphs, options);
-      })
-    .pipe(gulp.dest('app/fonts/'));       
+const fontName = 'Icons';
+ 
+gulp.task('iconfont', function(){
+  gulp.src(['app/images/*.svg'])
+     .pipe(iconfontCss({
+        path: 'app/scss/base/_icons_template.scss',
+        fontName: fontName,
+        targetPath: '../scss/_icons.scss',
+        fontPath: '../fonts/'
+     }))
+     .pipe(iconfont({
+        fontName: fontName
+     }))
+     .pipe(gulp.dest('app/fonts/'));
 });
+
 
 gulp.task('watch', function() {
     gulp.watch('app/scss/**/*.scss', gulp.series('sass'));
