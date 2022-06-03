@@ -36,7 +36,7 @@ gulp.task('iconfont', function(){
      .pipe(iconfontCss({
         path: 'app/scss/base/_icons_template.scss',
         fontName: fontName,
-        targetPath: '../scss/_icons.scss',
+        targetPath: '../scss/base/_icons.scss',
         fontPath: '../fonts/'
      }))
      .pipe(iconfont({
