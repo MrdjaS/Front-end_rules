@@ -49,7 +49,7 @@ $icon_font_name:"<%= fontName %>";
 	}
 }
 
-<% _.each(glyphs, function(glyph) { %>%icon-<%= glyph.fileName %>:before {
-	content:'\<%= glyph.codePoint %>';
+<% _.each(glyphs, function(glyph) { %>.icon-<%= glyph.fileName %>:before {
+    content:'\<%= glyph.codePoint %>';
 }
 <% }); %>

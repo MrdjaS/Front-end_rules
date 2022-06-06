@@ -1,0 +1,34 @@
+.under-hero__section--secondary {
+    @media (max-width:767px) {
+        flex-direction: column;
+    }
+}
+
+.under-hero__content--secondary {
+    @include for-laptop {  
+        margin-right: 20px;
+        margin-left: 0px;
+    }
+
+    @include for-tablet {
+        height: auto;
+    }
+
+    @media (max-width:767px) {
+        margin-right: 0px;
+    }
+}
+
+
+.under-hero__img--secondary {
+
+    @include for-laptop {  
+        margin-right: 0px;
+        margin-left: 20px;
+    }
+
+    @media (max-width:767px) {
+        margin-left: 0px;
+    }
+}
+

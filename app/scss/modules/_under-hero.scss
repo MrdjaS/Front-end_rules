@@ -1,14 +1,5 @@
 .under-hero {
-    height: 480px;
     display: flex;
-
-    @media (max-width:1023px) {
-        height: 410px;
-    }
-
-    @media (max-width:767px) {
-        height: 600px;
-    }
 }
 
 .under-hero__section {
@@ -17,17 +8,23 @@
     align-items: center;
     flex-direction: row;
     height: 100%;
+    margin-top: 70px;
+    margin-bottom: 70px;
+
+    @include for-tablet {  
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
 
     @media (max-width:767px) {
         flex-direction: column-reverse;
         justify-content: center;
-        height: 500px;
+        height: auto;
     }
 }
 
 .under-hero__content {
     width: 530px;
-    height: 340px;
 
     @include for-laptop {  
         width: 380px;
@@ -48,20 +45,8 @@
 }
 
 .under-hero__title {
-    color: $Green;
-
-    @include for-laptop {  
-        font-size: 3rem;
-        line-height: 4rem;
-    }
-
     @media (max-width:767px) {
         margin-top: 20px;
-    }
-
-    @include for-mobile-L {  
-        font-size: 2.6rem;
-        line-height: 3.2rem;
     }
 }
 
@@ -75,6 +60,7 @@
     @include for-laptop {  
         font-size: 1.8rem;
         line-height: 2.8rem;
+        margin-top: 20px;
     }
 
     @media (max-width:767px) {
@@ -102,7 +88,7 @@
     &:hover {
         color: $Orange;
         background-color: $White;
-        border: 1px solid $Orange;
+        box-shadow:  0 0 0 1px $Orange;
     }
 
     @include for-tablet {  
@@ -120,26 +106,16 @@
     }
 
     @media (max-width:1023px) {
-        display: none;
-    }
-}
-
-.under-hero__img--small {
-    display: none;
-    margin-right: 20px;
-
-    @media (max-width:1023px) {
-        display: inline-block;
+        width: 300px;
+        height: auto;
     }
 
     @media (max-width:767px) {
         margin-right: 0px;
         width: 335px;
-        height: 215px;
     }
 
     @media (max-width:374px) {
         width: 300px;
-        height: 193px;
     }
 }

@@ -43,21 +43,45 @@ closeBtnMobile.addEventListener('click',() => {
     closeBtnMobile.style.display = 'none';
 });
 
-//Slider 
+//First Slider
 
 const slider = document.getElementById('slider-content');
 const btnPrev = document.getElementById('btn-prev');
 const btnNext = document.getElementById('btn-next');
-const card = document.getElementsByClassName('slider__card');
+const card = document.querySelector('.slider__card');
+const cards = document.querySelectorAll('.slider__card');
+let cardWidth = card.offsetWidth;
+let cardDimensions = card.currentStyle || window.getComputedStyle(card);
+let cardMargin = parseInt(cardDimensions.marginRight);
+let windowWidth = window.innerWidth;
+let numOfSlides = 0;
 
+if (windowWidth < 768) {
+    numOfSlides = cards.length - 1;
+}  else {
+    numOfSlides = cards.length - 2;
+}
 
-btnNext.addEventListener('click', () => {
-    slider.append(card[0]);
+let slideNumber = 0;
+
+btnNext.addEventListener('click',() => {
+    if (slideNumber < numOfSlides) {
+        slideNumber++;
+    } else {
+      return slideNumber;
+    }
+    slider.style.transform = `translateX(-${slideNumber*(cardWidth+cardMargin)}px)`;
+});
+  
+btnPrev.addEventListener('click',() => {
+    if (slideNumber > 0) {
+        slideNumber--;
+    } else {
+      return slideNumber;
+    }
+    slider.style.transform = `translateX(-${slideNumber*(cardWidth+cardMargin)}px)`;
 });
 
-btnPrev.addEventListener('click', () => {
-    slider.prepend(card[card.length - 1]);
-});
 
 // Dropdown 
 

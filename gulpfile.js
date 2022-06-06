@@ -40,7 +40,9 @@ gulp.task('iconfont', function(){
         fontPath: '../fonts/'
      }))
      .pipe(iconfont({
-        fontName: fontName
+        fontName: fontName,
+        normalize:true,
+        fontHeight: 1001
      }))
      .pipe(gulp.dest('app/fonts/'));
 });
