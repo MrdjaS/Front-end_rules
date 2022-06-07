@@ -94,20 +94,20 @@
     }
 
     @include for-mobile-L {
-        display: none;
-    }
-}
-
-.search-overlay__button-close-small {
-    @include btn-search;
-    display: none;
-
-    @include for-mobile-L {
-        display: block;
         width: 36px;
         height: 36px;
         top: 12px;
         right: 12px;
+    }
+
+    .icon-close {
+        font-size: 3rem;
+        color: $DarkGrey;
+
+        @include for-mobile-L {
+            font-size: 2.2rem;
+            
+        }
     }
 }
 

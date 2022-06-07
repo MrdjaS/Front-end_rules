@@ -22,7 +22,7 @@ $icon_font_name:"<%= fontName %>";
 		}
 	}
 
-%icons_before_after {
+	[class^="icon-"] {
 	&:before,
 	&:after {
 		font-family: $icon_font_name;
@@ -36,7 +36,7 @@ $icon_font_name:"<%= fontName %>";
 	}
 }
 
-%icons_after {
+[class^="icon-"] {
 	&:after {
 		font-family: $icon_font_name;
 		speak: none;

@@ -24,7 +24,7 @@
           <ul class="navbar__menu">
             <li class="navbar__item navbar__item--expand" id="navbar-dropdown-first">
               <a href="#">About us</a>
-              <img class="navbar__arrow" src="images/keyboard_arrow_right_small.png" id="navbar-arrow"/>
+              <i class="icon-keyboard_arrow_right navbar__arrow" id="navbar-arrow"></i>
               <span class="navbar__triangle"></span>
               <ul class="navbar__dropdown" id="navbar-dropdown-first-list">
                 <li>Our company</li>
@@ -37,7 +37,7 @@
             <li class="navbar__item"><a href="#">Investors</a></li>
             <li class="navbar__item navbar__item--expand" id="navbar-dropdown-second">
               <a href="#">News & Media</a>
-              <img class="navbar__arrow navbar__arrow--secondary" src="images/keyboard_arrow_right_small.png" id="navbar-arrow-second"/>
+              <i class="icon-keyboard_arrow_right navbar__arrow navbar__arrow--secondary" id="navbar-arrow-second"></i>
               <span class="navbar__triangle navbar__triangle--secondary"></span>
               <ul class="navbar__dropdown navbar__dropdown--second" id="navbar-dropdown-second-list"> 
                 <li>News releases</li>
@@ -49,19 +49,15 @@
           </ul>
         </nav>
           <button class="navbar__search search-btn">
-            <img src="images/search.png" alt="search icon" />
-          </button>
-          <button class="navbar__search-mobile search-btn">
-            <img src="images/search-small.png" alt="search icon" />
+            <i class="icon-search"></i>
           </button>
           <button class="navbar__close">
-            <img src="images/close-small.png" alt="close icon" />
+            <i class="icon-close"></i>
           </button>
-          <img
-            class="navbar__hamburger"
-            src="images/menu.png"
-            alt="hamburger menu"
-          />
+          <button class="navbar__hamburger">
+            <i class="icon-menu"></i>
+          </button>
+          
         
       </div>
     </header>
@@ -105,7 +101,7 @@
         <div class="container slider__container">
           <h2 class="slider__title">Sed ultricies lorem</h2>
           <div class="slider__content" id="slider-content">
-            <div class="slider__card">
+            <div class="slider__card slider__card--primary">
               <img src="images/slider1.png" />
               <h3 class="slider__heading">Maecenas</h3>
               <p class="slider__text">Proin ullamcorper fermentum quam</p>
@@ -113,7 +109,7 @@
                   05 November 2021
                 </time>
             </div>
-            <div class="slider__card">
+            <div class="slider__card slider__card--primary">
               <img src="images/slider2.png" />
               <h3 class="slider__heading">feugiat</h3>
               <p class="slider__text">
@@ -124,7 +120,7 @@
                 </time>
             </div>
 
-            <div class="slider__card">
+            <div class="slider__card slider__card--primary">
                 <img src="images/slider2.png" />
                 <h3 class="slider__heading">feugiat</h3>
                 <p class="slider__text">
@@ -135,7 +131,7 @@
                   </time>
               </div>
 
-            <div class="slider__card">
+            <div class="slider__card slider__card--primary">
                 <img src="images/slider1.png" />
                 <h3 class="slider__heading">Maecenas</h3>
                 <p class="slider__text">Proin ullamcorper fermentum quam</p>
@@ -157,20 +153,29 @@
         <div class="container tabs__section">
           <h2 class="tabs__title">Turpis eu ultrices porttitor</h2>
           <div class="tabs__options">
-            <input type="radio" name="tab" id="tab-nav-1" checked>
-            <label for="tab-nav-1">2021</label>
-
-            <input type="radio" name="tab" id="tab-nav-2">
-            <label for="tab-nav-2">2020</label>
-
-            <input type="radio" name="tab" id="tab-nav-3">
-            <label for="tab-nav-3">2019</label>
-
-            <input type="radio" name="tab" id="tab-nav-4">
-            <label for="tab-nav-4">2018</label>
+            <span class="tabs__selected-option">2021</span>
+            <button class="tabs__responsive">Archives</button>
+            <ul class="tabs__desktop">
+              <li>
+                <input type="radio" name="tab" id="tab-nav-1" class="tab-nav tab-nav-1" checked>
+                <label for="tab-nav-1">2021</label>
+              </li>
+              <li>
+                <input type="radio" name="tab" id="tab-nav-2" class="tab-nav tab-nav-2">
+                <label for="tab-nav-2">2020</label>
+              </li>
+              <li>
+                <input type="radio" name="tab" id="tab-nav-3" class="tab-nav tab-nav-3">
+                <label for="tab-nav-3">2019</label>
+              </li>
+              <li>
+                <input type="radio" name="tab" id="tab-nav-4" class="tab-nav tab-nav-4">
+                <label for="tab-nav-4">2018</label>
+              </li>
+            </ul>
 
             <div class="tabs__content">
-              <div class="tabs__text">
+              <div class="tabs__text active">
                 <p>Proin pretium vehicula sagittis. Donec eget orci 
                   eget nunc vulputate pharetra semper feugiat orci. 
                   Phasellus pharetra dui erat, ut eleifend nibh sagittis ac.
@@ -251,19 +256,66 @@
           </div>
         </div>
       </section>
+
+      <section class="slider slider--secondary">
+        <div class="container slider__container">
+          <h2 class="slider__title">Elit vel massa accumsan lacinia</h2>
+          <div class="slider__content slider__content--secondary" id="slider-content--secondary">
+            <div class="slider__card">
+              <img src="images/slider3.png" />
+              <h3 class="slider__heading">Phasellus</h3>
+              <p class="slider__text">Aliquam egestas finibus massa vitae sollicitudin</p>
+              <time class="slider__time" datetime="2021-11-05">
+                  05 November 2021
+                </time>
+            </div>
+
+            <div class="slider__card">
+              <img src="images/slider4.png" />
+              <h3 class="slider__heading">ullamcorper</h3>
+              <p class="slider__text">
+                Etiam vulputate ipsum massa
+              </p>
+              <time class="slider__time" datetime="2021-11-05"
+                >05 November 2021
+                </time>
+            </div>
+
+            <div class="slider__card">
+              <img src="images/slider4.png" />
+              <h3 class="slider__heading">ullamcorper</h3>
+              <p class="slider__text">
+                Etiam vulputate ipsum massa
+              </p>
+              <time class="slider__time" datetime="2021-11-05"
+                >05 November 2021
+                </time>
+            </div>
+
+            <div class="slider__card">
+              <img src="images/slider3.png" />
+              <h3 class="slider__heading">Phasellus</h3>
+              <p class="slider__text">Aliquam egestas finibus massa vitae sollicitudin</p>
+              <time class="slider__time" datetime="2021-11-05">
+                  05 November 2021
+                </time>
+            </div>
+          </div>
+          <button class="slider__button slider__button--primary" id="btn-prev-second">
+            <i class="icon-keyboard_arrow_left"></i>  
+          </button>
+          <button class="slider__button slider__button--secondary" id="btn-next-second">
+            <i class="icon-keyboard_arrow_right"></i>
+          </button>
+        </div>
+      </section>
     </main>
 
     <div class="search-overlay" id="search-overlay">
       <form class="search-overlay__form">
         <input class="search-overlay__input" type="text" placeholder="Search" />
         <button class="search-overlay__button-close close-btn" id="close-btn">
-          <img src="images/close.png" alt="close icon" />
-        </button>
-        <button
-          class="search-overlay__button-close-small close-btn"
-          id="close-btn-small"
-        >
-          <img src="images/close-small.png" alt="close icon" />
+          <i class="icon-close"></i>
         </button>
       </form>
     </div>

@@ -74,40 +74,13 @@ header {
     z-index: 2;
 }
 
-.navbar__triangle {
-    width: 0;
-    height: 0;
-    border-left: 10px solid transparent;
-    border-right: 10px solid transparent;
-    border-bottom: 20px solid white;
-    position: absolute;
-    left: 400px;
-    top: 140px;
-
-    @include for-laptop {
-        left: 180px;
-    }
-
-    @include for-tablet {
-        display: none;
-    }
-}
-
-.navbar__triangle--secondary {
-    position: absolute;
-    top: 140px;
-    left: 675px;
-
-    @include for-laptop {
-        left: 455px;
-    }
-}
-
 .navbar__arrow {
     display: none;
     position: absolute;
     right: 16px;
     top: 40px;
+    font-size: 1.6rem;
+    color: $Orange;
 
     @include for-tablet {
         display: block;
@@ -130,8 +103,7 @@ header {
     font-size: 2rem;
     font-weight: 600;
     line-height: 2rem;
-    padding-left: 15px;
-    padding-right: 15px;
+    
     transition: background-color 200ms ease-in-out;
 
     &:first-of-type {
@@ -143,17 +115,6 @@ header {
             @include for-mobile-L {
                 padding-left: 0px;
             }
-        }
-    }
-
-    @media (min-width:769px) {
-        &:hover {
-            background-color: $Grey;
-        }
-    
-        &:hover ul{
-            visibility: visible;
-            opacity: 1;
         }
     }
 
@@ -200,7 +161,7 @@ header {
         font-weight: 600;
         line-height: 2rem;
         color: $Black;
-        padding: 70px 0;
+        padding: 70px 15px;
 
         @include for-tablet {
             padding: 30px 0px 26px 20px;
@@ -208,6 +169,18 @@ header {
 
         @include for-mobile-L {
             padding-left: 0px;
+        }
+
+        @media (min-width:769px) {
+            &:hover {
+                background-color: $Grey;
+                
+            }
+        
+            &:hover ~ .navbar__dropdown{
+                visibility: visible;
+                opacity: 1;
+            }
         }
     }
 }
@@ -244,6 +217,22 @@ header {
         height: auto;
         text-align: left;
         display: none;
+    }
+
+    &:before {
+        content: "";
+        width: 0;
+        height: 0;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        border-bottom: 20px solid white;
+        position: absolute;
+        left: 140px;
+        top: -20px;
+
+        @include for-tablet {
+            display: none;
+        }
     }
 
     li {
@@ -314,30 +303,33 @@ header {
     }
 
     @include for-tablet {    
-        display: none;
-    }
-}
-
-.navbar__search-mobile {
-    @include btn-search;
-    display: none;
-
-    @include for-tablet {  
-        display: inline-block;  
+        top: 13px;
+        right: 80px;
         width: 30px;
         height: 60px;
-        top: 10px;
-        right: 80px;
     }
 
-    @include for-mobile-L {  
-        right: 75px;
+    @include for-tablet {    
+        right: 70px;
+    }
+
+    .icon-search {
+        color: $Orange;
+        font-size: 4rem;
+
+        @include for-tablet {    
+            font-size: 3rem; 
+        } 
     }
 }
+
+
 
 .navbar__hamburger {
     display: none;
     cursor: pointer;
+    border: none;
+    background-color: $White;
     
 
     @include for-tablet {
@@ -346,6 +338,16 @@ header {
         top: 30px;
         right: 20px;
     }  
+
+    .icon-menu {
+        font-size: 2rem;
+        color: $DarkGrey;
+        display: none;
+
+        @include for-tablet {
+            display: inline;
+        } 
+    }     
 }
 
 .navbar__close {
@@ -357,7 +359,12 @@ header {
         position: absolute;
         top: 29px;
         right: 24px;
-    } 
+    }
+    
+    .icon-close {
+        font-size: 2.2rem;
+        color: $DarkGrey;
+    }
 }
 
 .navbar__dropdown--active {

@@ -1,0 +1,16 @@
+.slider--secondary {
+    @media (max-width:767px) {
+        height: 680px;
+    }
+
+    @include for-mobile-L { 
+        height: 641px;
+    }
+
+}
+
+.slider__content--secondary {
+    @media (max-width:767px) {
+        margin-top: 144px;
+    }
+}

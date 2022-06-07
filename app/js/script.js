@@ -22,7 +22,7 @@ closeBtn.forEach(item => {
 
 const hamburger = document.querySelector('.navbar__hamburger');
 const mainMenu = document.querySelector('.navbar__menu');
-const search = document.querySelector('.navbar__search-mobile');
+const search = document.querySelector('.navbar__search');
 const closeBtnMobile = document.querySelector('.navbar__close');
 const width = window.innerWidth;
 const expand = document.querySelector('.navbar__item--expand');
@@ -48,8 +48,8 @@ closeBtnMobile.addEventListener('click',() => {
 const slider = document.getElementById('slider-content');
 const btnPrev = document.getElementById('btn-prev');
 const btnNext = document.getElementById('btn-next');
-const card = document.querySelector('.slider__card');
-const cards = document.querySelectorAll('.slider__card');
+const card = document.querySelector('.slider__card--primary');
+const cards = document.querySelectorAll('.slider__card--primary');
 let cardWidth = card.offsetWidth;
 let cardDimensions = card.currentStyle || window.getComputedStyle(card);
 let cardMargin = parseInt(cardDimensions.marginRight);
@@ -80,6 +80,33 @@ btnPrev.addEventListener('click',() => {
       return slideNumber;
     }
     slider.style.transform = `translateX(-${slideNumber*(cardWidth+cardMargin)}px)`;
+});
+
+//Second slider 
+
+const sliderSecond = document.getElementById('slider-content--secondary');
+const btnPrevSliderSecond = document.getElementById('btn-prev-second');
+const btnNextSliderSecond = document.getElementById('btn-next-second');
+
+
+let slideNumberSecond = 0;
+
+btnNextSliderSecond.addEventListener('click',() => {
+    if (slideNumberSecond < numOfSlides) {
+        slideNumberSecond++;
+    } else {
+      return slideNumberSecond;
+    }
+    sliderSecond.style.transform = `translateX(-${slideNumberSecond*(cardWidth+cardMargin)}px)`;
+});
+  
+btnPrevSliderSecond.addEventListener('click',() => {
+    if (slideNumberSecond > 0) {
+        slideNumberSecond--;
+    } else {
+      return slideNumberSecond;
+    }
+    sliderSecond.style.transform = `translateX(-${slideNumberSecond*(cardWidth+cardMargin)}px)`;
 });
 
 
@@ -117,3 +144,44 @@ dropDownSecondItem.addEventListener('click', () => {
         arrowSecondItem.style.transform = `rotate(0deg)`;
     }
 });
+
+
+// Tabs
+let tabsText = [...document.querySelectorAll('.tabs__text')];
+const tabsMenu = document.querySelector('.tabs__desktop');
+const tabsArchivesButton = document.querySelector('.tabs__responsive');
+
+
+tabsArchivesButton.addEventListener('click', () => {
+    tabsMenu.classList.toggle('active');
+});
+
+
+document.querySelector('.tab-nav-1').onclick = function() { 
+    for(let i = 0; i < tabsText.length; i++) {
+        tabsText[i].classList.remove('active');
+    }
+    tabsText[0].classList.toggle('active');
+    document.querySelector('.tabs__selected-option').textContent = '2021';
+};
+document.querySelector('.tab-nav-2').onclick = function() { 
+    for(let i = 0; i < tabsText.length; i++) {
+        tabsText[i].classList.remove('active');
+    }
+    tabsText[1].classList.toggle('active');
+    document.querySelector('.tabs__selected-option').textContent = '2020';
+};
+document.querySelector('.tab-nav-3').onclick = function() { 
+    for(let i = 0; i < tabsText.length; i++) {
+        tabsText[i].classList.remove('active')
+    }
+    tabsText[2].classList.toggle('active');
+    document.querySelector('.tabs__selected-option').textContent = '2019';
+};
+document.querySelector('.tab-nav-4').onclick = function() { 
+    for(let i = 0; i < tabsText.length; i++) {
+        tabsText[i].classList.remove('active')
+    }
+    tabsText[3].classList.toggle('active');
+    document.querySelector('.tabs__selected-option').textContent = '2018';
+};

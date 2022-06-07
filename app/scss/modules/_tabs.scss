@@ -13,6 +13,23 @@
     }
 }
 
+.tabs__selected-option {
+    display: none;
+
+    @media (max-width:570px) {
+        display: inline-block;
+        text-align: center;
+        font-size: 1.6rem;
+        line-height: 4rem;
+        font-weight: 700;
+        width: 100px;
+        background-color: $LightGreen;
+        color: $White;
+        border-radius: 3px 3px 0px 0px;
+        margin-right: -1px;
+    }       
+}
+
 .tabs__section {
     margin-top: 70px;
     margin-bottom: 70px;
@@ -29,6 +46,24 @@
 
 .tabs__options {
     margin-top: 20px;
+}
+
+.tabs__desktop {
+    list-style-type: none;
+    display: flex;
+
+    @media (max-width:570px) {
+        display: none;
+        margin-top: 2px;
+    }
+
+    li {
+        margin-right: 2px;
+
+        @media (max-width:570px) {
+            margin-right: 0px;
+        }
+    }
 
     input {
         display: none;
@@ -37,6 +72,14 @@
             font-weight: 700;
             background-color: $LightGreen;
             color: $White;
+        }
+
+        @media (max-width:570px) {
+            &:checked + label {
+                font-weight: 700;
+                color: $DarkGrey;
+                background-color: $BackgroundGrey;
+            }
         }
     }
 
@@ -49,20 +92,23 @@
         text-align: center;
         color: $DarkGrey;
         background-color: $BackgroundGrey;
-        margin-right: 2px;
+        border-radius: 3px 3px 0px 0px;
+        
         cursor: pointer;
 
         @include for-tablet { 
             font-size: 1.8rem;
+            line-height: 4rem;
         }
 
-        @include for-mobile-L { 
-            font-size: 1.6rem;
-            line-height: 2rem;
-            width: 100px;
-            padding-top: 10px;
-            padding-bottom: 10px;
+        @media (max-width:570px) {
+            border-radius: 0;
+            width: 335px;
         }
+
+        @media (max-width:374px) {
+            width: 280px;
+        } 
 
         &:last-of-type {
             margin-right: 0px;
@@ -74,6 +120,28 @@
             color: $White;
         }
     }
+}
+
+.tabs__responsive {
+    display: none;
+
+    @media (max-width:570px) {
+        display: inline-block;
+        text-align: center;
+        font-size: 1.6rem;
+        line-height: 4rem;
+        max-width: 233px;
+        width: 100%;
+        background-color: $BackgroundGrey;
+        color: $DarkGrey;
+        border-radius: 3px 3px 0px 0px;
+        border: none;
+    } 
+
+    @media (max-width:374px) {
+        max-width: 178px;
+        width: 100%;
+    } 
 }
 
 .tabs__content {
@@ -96,14 +164,10 @@
     }
 }
 
-#tab-nav-1:checked ~ .tabs__content > .tabs__text:nth-of-type(1),
-#tab-nav-2:checked ~ .tabs__content > .tabs__text:nth-of-type(2),
-#tab-nav-3:checked ~ .tabs__content > .tabs__text:nth-of-type(3),
-#tab-nav-4:checked ~ .tabs__content > .tabs__text:nth-of-type(4)
-{
+.active {
     display: block;
-    
 }
+
 
 
 

@@ -7,9 +7,12 @@ $icon_font_name:"Icons";
 	url('../fonts/Icons.ttf') format('truetype'),
 	url('../fonts/Icons.svg#Icons') format('svg');
 }
-.icon-keyboard_arrow_right,
-.icon-uEA01-keyboard_arrow_left,
-.last_selector {
+%icon-close,
+%icon-keyboard_arrow_left,
+%icon-keyboard_arrow_right,
+%icon-menu,
+%icon-search,
+%last_selector {
 		&:before {
 			font-family:$icon_font_name;
 			-webkit-font-smoothing: antialiased;
@@ -23,7 +26,7 @@ $icon_font_name:"Icons";
 		}
 	}
 
-.icons_before_after {
+	[class^="icon-"] {
 	&:before,
 	&:after {
 		font-family: $icon_font_name;
@@ -37,7 +40,7 @@ $icon_font_name:"Icons";
 	}
 }
 
-.icons_after {
+[class^="icon-"] {
 	&:after {
 		font-family: $icon_font_name;
 		speak: none;
@@ -50,9 +53,18 @@ $icon_font_name:"Icons";
 	}
 }
 
-.icon-keyboard_arrow_right:before {
+.icon-close:before {
     content:'\E001';
 }
-.icon-uEA01-keyboard_arrow_left:before {
+.icon-keyboard_arrow_left:before {
     content:'\E002';
 }
+.icon-keyboard_arrow_right:before {
+    content:'\E003';
+}
+.icon-menu:before {
+    content:'\E004';
+}
+.icon-search:before {
+    content:'\E005';
+}
