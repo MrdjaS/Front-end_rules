@@ -1,0 +1,134 @@
+.expand {
+    padding: 70px 20px 70px 20px;
+
+    @include for-tablet { 
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+}
+
+.container__expand {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.expand__title {
+    width: 100%;
+    padding-bottom: 30px;
+    border-bottom: 2px solid $Grey;
+}
+
+.expand__item {
+    width: 100%;
+    border-bottom: 2px solid $Grey;
+
+    &:last-of-type {
+        @include for-mobile-L { 
+            margin-top: 20px;
+            border-top: 2px solid $Grey;
+        }
+    }
+}
+
+.expand__heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30.5px;
+    margin-bottom: 35.5px;
+    cursor: pointer;
+
+    @include for-mobile-L { 
+        margin-top: 16.5px;
+        margin-bottom: 21.5px;
+    }
+
+    button {
+        font-size: 3rem;
+        line-height: 3.9rem;
+        font-weight: 700;
+        text-align: left;
+        color: $DarkGrey;
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+        transition: 0.2s;
+
+        @include for-mobile-L { 
+            font-size: 2rem;
+            line-height: 2rem;
+        }
+    }
+}
+
+.expand__item:nth-of-type(2) .expand__heading,
+.expand__item:nth-of-type(3) .expand__heading {
+    margin-top: 30px;
+    margin-bottom: 35px;
+
+    @include for-mobile-L { 
+        margin-top: 21.5px;
+        margin-bottom: 26.5px;
+    }
+}
+
+.expand__text {
+    overflow: hidden;
+    max-height: 0px;
+    position: relative;
+    opacity: 0.5;
+    transition: all 0.3s ease;
+
+    p {
+        color: $DarkGrey;
+        padding-right: 42px;
+        padding-bottom: 60px;
+        padding-top: 10px;
+
+        @include for-tablet { 
+            padding-right: 0px;
+        }
+
+        @include for-mobile-L { 
+            padding-bottom: 20px;
+        }
+
+        span {
+            color: $Orange;
+            font-size: 1.6rem;
+            line-height: 2.8rem;
+            font-weight: 700;
+
+            @include for-mobile-L { 
+                font-size: 1.4rem;
+                line-height: 2.4rem;
+            }
+        }
+    }
+}
+
+.icon-remove {
+    width: 70px;
+    text-align: center;
+    font-size: 0.5rem;
+    color: $Orange;
+    display: none;
+}
+
+.icon-add {
+    width: 70px;
+    text-align: center;
+    font-size: 2.5rem;
+    color: $Orange;
+    display: none;
+}
+
+.icon--active {
+    display: inline-block;
+}
+
+.expand__text--active {
+    opacity: 1;
+    max-height: 100%;
+}

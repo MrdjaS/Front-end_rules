@@ -1,0 +1,177 @@
+.contact {
+    background-color: $Green;
+    padding: 70px 0;
+
+    @include for-tablet { 
+        padding: 50px 0;
+    }
+}
+
+.container__contact {
+    flex-direction: column;
+}
+
+.contact__title {
+    color: $White;
+    margin-bottom: 10px;
+}
+
+.contact__form {
+    max-width: 1230px;
+    width: 100%;
+}
+
+.contact__row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 20px;
+
+    @media (max-width:1280px) {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    @include for-mobile-L { 
+        flex-direction: column;
+    }
+}
+
+.contact__row--primary {
+    &:last-of-type {
+        margin-top: 13px;
+    }
+}
+
+.contact__row--secondary {
+    margin-top: 10px;
+}
+
+.contact__row--terniary {
+    margin-top: 20px;
+}
+
+.contact__row--quaternary {
+    margin-top: 20px;
+    justify-content: center;
+}
+
+.contact__item {
+    max-width: 590px;
+    width: 100%;
+    
+
+    &:first-of-type {
+        margin-right: 30px;
+    }
+
+    &:last-of-type {
+        @include for-mobile-L { 
+            margin-top: 20px;
+        }
+    }
+}
+
+.contact__item--primary {
+    max-width: 1230px;
+    width: 100%;
+    
+    &:first-of-type {
+        margin-right: 0;
+    }
+
+    &:last-of-type {
+        @include for-mobile-L { 
+            margin-top: 0px;
+        }
+    }
+}
+
+.contact__item--secondary {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    &:last-of-type {
+        @include for-mobile-L { 
+            margin-top: 0px;
+        }
+    }
+}
+
+.contact__input {
+    max-width: 590px;
+    width: 100%;
+    padding-top: 17px;
+    padding-bottom: 16px;
+    padding-left: 19.5px;
+    margin-top: 10px;
+
+    @include for-tablet { 
+        padding-top: 19px;
+        padding-bottom: 18px;
+        padding-left: 11.6px;
+    }
+
+    @include for-mobile-L { 
+        padding-top: 15.5px;
+        padding-bottom: 15.5px;
+        padding-left: 11.17px;
+    }
+}
+
+.contact__textarea {
+    width: 100%;
+    height: 180px;
+    padding-top: 20px;
+    padding-left: 18px;
+    margin-top: 10px;
+
+    @include for-mobile-L {
+        height: 160px; 
+        padding-top: 15.5px;
+        padding-left: 10px;
+    }
+}
+
+.contact__radio {
+    width: 26px;
+    height: 26px;
+    cursor: pointer;
+    accent-color: $LightGreen;
+}
+
+.contact__label {
+    font-size: 2.2rem;
+    line-height: 2.3rem;
+    font-weight: 700;
+    color: $White;
+    margin-left: 10px;
+    margin-top: 2px;
+    cursor: pointer;
+
+    @include for-tablet { 
+        font-size: 2rem;
+        line-height: 2rem;
+    }
+
+    @include for-mobile-L { 
+        font-size: 1.8rem;
+        line-height: 1.8rem;
+    }
+}
+
+.contact__button {
+    background-color: transparent;
+    box-shadow:  0 0 0 1px $White;
+
+    &:hover {
+        color: $Green;
+        background-color: $White;
+        box-shadow:  0 0 0 1px $White;
+    }
+
+    @include for-mobile-L { 
+        padding: 11px 19.5px;
+    }
+}

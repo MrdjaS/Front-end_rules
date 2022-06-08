@@ -75,21 +75,6 @@
 
 .under-hero__button {
     margin-top: 30px;
-    padding: 10px 16px;
-    font-size: 2rem;
-    line-height: 3rem;
-    font-weight: 700;
-    color: $White;
-    border: none;
-    background-color: $Orange;
-    border-radius: 5px;
-    cursor: pointer;
-
-    &:hover {
-        color: $Orange;
-        background-color: $White;
-        box-shadow:  0 0 0 1px $Orange;
-    }
 
     @include for-tablet {  
         margin-top: 20px;
@@ -117,5 +102,39 @@
 
     @media (max-width:374px) {
         width: 300px;
+    }
+}
+
+.under-hero__section--secondary {
+    @media (max-width:767px) {
+        flex-direction: column;
+    }
+}
+
+.under-hero__content--secondary {
+    @include for-laptop {  
+        margin-right: 20px;
+        margin-left: 0px;
+    }
+
+    @include for-tablet {
+        height: auto;
+    }
+
+    @media (max-width:767px) {
+        margin-right: 0px;
+    }
+}
+
+
+.under-hero__img--secondary {
+
+    @include for-laptop {  
+        margin-right: 0px;
+        margin-left: 20px;
+    }
+
+    @media (max-width:767px) {
+        margin-left: 0px;
     }
 }

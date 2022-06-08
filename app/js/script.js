@@ -185,3 +185,32 @@ document.querySelector('.tab-nav-4').onclick = function() {
     tabsText[3].classList.toggle('active');
     document.querySelector('.tabs__selected-option').textContent = '2018';
 };
+
+
+
+//Expand text section //
+let iconRemove = [... document.querySelectorAll('.icon-remove')];
+let iconAdd = [... document.querySelectorAll('.icon-add')];
+let expandText = [... document.querySelectorAll('.expand__text')];
+let expandButtonFirst = document.getElementById('expand__heading-first');
+let expandButtonSecond = document.getElementById('expand__heading-second');
+let expandButtonThird = document.getElementById('expand__heading-third');
+
+
+expandButtonFirst.addEventListener('click', () => {
+        iconRemove[0].classList.toggle('icon--active');
+        iconAdd[0].classList.toggle('icon--active');
+        expandText[0].classList.toggle('expand__text--active');
+});
+
+expandButtonSecond.addEventListener('click', () => {
+    iconRemove[1].classList.toggle('icon--active');
+    iconAdd[1].classList.toggle('icon--active');
+    expandText[1].classList.toggle('expand__text--active');
+});
+
+expandButtonThird.addEventListener('click', () => {
+    iconRemove[2].classList.toggle('icon--active');
+    iconAdd[2].classList.toggle('icon--active');
+    expandText[2].classList.toggle('expand__text--active');
+});

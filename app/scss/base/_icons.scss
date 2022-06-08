@@ -7,10 +7,12 @@ $icon_font_name:"Icons";
 	url('../fonts/Icons.ttf') format('truetype'),
 	url('../fonts/Icons.svg#Icons') format('svg');
 }
+%icon-add,
 %icon-close,
 %icon-keyboard_arrow_left,
 %icon-keyboard_arrow_right,
 %icon-menu,
+%icon-remove,
 %icon-search,
 %last_selector {
 		&:before {
@@ -53,18 +55,24 @@ $icon_font_name:"Icons";
 	}
 }
 
-.icon-close:before {
+.icon-add:before {
     content:'\E001';
 }
-.icon-keyboard_arrow_left:before {
+.icon-close:before {
     content:'\E002';
 }
-.icon-keyboard_arrow_right:before {
+.icon-keyboard_arrow_left:before {
     content:'\E003';
 }
-.icon-menu:before {
+.icon-keyboard_arrow_right:before {
     content:'\E004';
 }
-.icon-search:before {
+.icon-menu:before {
     content:'\E005';
+}
+.icon-remove:before {
+    content:'\E006';
+}
+.icon-search:before {
+    content:'\E007';
 }
