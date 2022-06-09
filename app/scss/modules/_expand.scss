@@ -1,22 +1,21 @@
-.expand {
-    padding: 70px 20px 70px 20px;
-
-    @include for-tablet { 
-        padding-top: 50px;
-        padding-bottom: 50px;
-    }
-}
-
 .container__expand {
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
+
+    @include for-mobile-L { 
+        padding-right: 0px;
+    }
 }
 
 .expand__title {
     width: 100%;
-    padding-bottom: 30px;
+    padding-bottom: 28px;
     border-bottom: 2px solid $Grey;
+
+    @include for-mobile-L { 
+        max-width: 335px;
+    }
 }
 
 .expand__item {
@@ -25,7 +24,7 @@
 
     &:last-of-type {
         @include for-mobile-L { 
-            margin-top: 20px;
+            margin-top: 18px;
             border-top: 2px solid $Grey;
         }
     }
@@ -40,7 +39,7 @@
     cursor: pointer;
 
     @include for-mobile-L { 
-        margin-top: 16.5px;
+        margin-top: 18px;
         margin-bottom: 21.5px;
     }
 
@@ -60,12 +59,16 @@
             line-height: 2rem;
         }
     }
+
+    @include for-mobile-L { 
+        padding-right: 20px;
+    }
 }
 
 .expand__item:nth-of-type(2) .expand__heading,
 .expand__item:nth-of-type(3) .expand__heading {
-    margin-top: 30px;
-    margin-bottom: 35px;
+    margin-top: 29px;
+    margin-bottom: 34px;
 
     @include for-mobile-L { 
         margin-top: 21.5px;
@@ -94,6 +97,10 @@
             padding-bottom: 20px;
         }
 
+        @include for-mobile-L { 
+            padding-right: 20px;
+        }
+
         span {
             color: $Orange;
             font-size: 1.6rem;
@@ -111,17 +118,25 @@
 .icon-remove {
     width: 70px;
     text-align: center;
-    font-size: 0.5rem;
+    font-size: 0.44rem;
     color: $Orange;
     display: none;
+
+    @include for-mobile-L { 
+        padding-right: 10px;
+    }
 }
 
 .icon-add {
     width: 70px;
     text-align: center;
-    font-size: 2.5rem;
+    font-size: 2.3rem;
     color: $Orange;
     display: none;
+
+    @include for-mobile-L { 
+        padding-right: 10px;
+    }
 }
 
 .icon--active {

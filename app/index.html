@@ -9,16 +9,12 @@
     <meta name="keywords" content="" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Epilogue:wght@300;400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
     <link rel="stylesheet" href="css/styles.css" />
     <title>Front-end rules</title>
   </head>
   <body>
     <header>
-      <div class="container">
+      <div class="container header__container">
         <nav class="navbar">
           <img class="navbar__logo" src="images/Logo.png" alt="Logo" />
           <ul class="navbar__menu">
@@ -56,15 +52,13 @@
           </button>
           <button class="navbar__hamburger">
             <i class="icon-menu"></i>
-          </button>
-          
-        
+          </button> 
       </div>
     </header>
 
     <main>
       <section class="hero section">
-        <div class="container">
+        <div class="container hero__container">
           <div class="hero__section">
             <h1 class="hero__title">
               Donec <span>condimentum</span> viverra ante
@@ -78,8 +72,8 @@
         </div>
       </section>
 
-      <section class="under-hero">
-        <div class="container under-hero__section">
+      <section class="section under-hero">
+        <div class="container under-hero__container">
           <div class="under-hero__content">
             <h2 class="under-hero__title">Suspendisse vitae purus quis dui</h2>
             <p class="under-hero__text">
@@ -97,7 +91,7 @@
         </div>
       </section>
 
-      <section class="slider">
+      <section class="section slider">
         <div class="container slider__container">
           <h2 class="slider__title">Sed ultricies lorem</h2>
           <div class="slider__content" id="slider-content">
@@ -149,12 +143,12 @@
         </div>
       </section>
 
-      <section class="tabs">
-        <div class="container tabs__section">
+      <section class="section tabs">
+        <div class="container">
           <h2 class="tabs__title">Turpis eu ultrices porttitor</h2>
           <div class="tabs__options">
             <span class="tabs__selected-option">2021</span>
-            <button class="tabs__responsive">Archives</button>
+            <button class="tabs__responsive">Archive</button>
             <ul class="tabs__desktop">
               <li>
                 <input type="radio" name="tab" id="tab-nav-1" class="tab-nav tab-nav-1" checked>
@@ -238,14 +232,14 @@
         </div>
       </section>
 
-      <section class="under-hero">
-        <div class="container under-hero__section under-hero__section--secondary">
+      <section class="section under-hero">
+        <div class="container under-hero__container under-hero__container--secondary">
           <img
-            class="under-hero__img under-hero__img--secondary"
+            class="under-hero__img"
             src="images/under-hero-2.png"
             alt="under hero image"
           />
-          <div class="under-hero__content under-hero__content--secondary">
+          <div class="under-hero__content">
             <h2 class="under-hero__title">Proin pretium vehicula</h2>
             <p class="under-hero__text">
               Etiam vulputate ipsum massa. Pellentesque porttitor, 
@@ -257,7 +251,7 @@
         </div>
       </section>
 
-      <section class="slider slider--secondary">
+      <section class="section slider slider--secondary">
         <div class="container slider__container">
           <h2 class="slider__title">Elit vel massa accumsan lacinia</h2>
           <div class="slider__content slider__content--secondary" id="slider-content--secondary">
@@ -310,7 +304,7 @@
         </div>
       </section>
 
-      <section class="expand">
+      <section class="section expand">
         <div class="container container__expand">
           <h2 class="expand__title">Mauris libero odio</h2>
           <div class="expand__item">
@@ -426,8 +420,8 @@
         </div>
       </section>
 
-      <section class="contact">
-        <div class="container container__contact">
+      <section class="section contact">
+        <div class="container contact__container">
           <h2 class="contact__title">Mauris libero odio</h2>
           <form class="contact__form">
             <div class="contact__row">
@@ -472,15 +466,21 @@
 
             <div class="contact__row contact__row--primary">
               <div class="contact__item contact__item--secondary">
-                <input type="radio"  name="radio" id="contact-radio-1" class="contact__radio" checked>
-                <label for="contact-radio-1" class="contact__label">Pellentesque at vehicula lacus</label>
+                <label class="contact__label">
+                  <input type="radio" name="radio" class="contact__radio">
+                  <span></span>
+                  Pellentesque at vehicula lacus 
+                </label>
               </div>
             </div>
 
             <div class="contact__row contact__row--secondary">
               <div class="contact__item contact__item--secondary">
-                <input type="radio" name="radio" id="contact-radio-2" class="contact__radio">
-                <label for="contact-radio-2" class="contact__label">Pellentesque at vehicula lacus</label>
+                <label class="contact__label contact__label--primary">
+                  <input type="radio" name="radio" class="contact__radio">
+                  <span></span>
+                  Pellentesque at vehicula lacus
+                </label>
               </div>
             </div>
             <div class="contact__row contact__row--terniary">

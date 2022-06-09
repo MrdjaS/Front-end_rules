@@ -20,5 +20,8 @@
     "stylelint": "^14.8.5",
     "stylelint-config-standard": "^25.0.0",
     "stylelint-scss": "^4.2.0"
+  },
+  "dependencies": {
+    "gulp-open": "^3.0.1"
   }
 }

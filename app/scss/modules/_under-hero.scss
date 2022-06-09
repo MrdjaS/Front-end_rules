@@ -2,19 +2,12 @@
     display: flex;
 }
 
-.under-hero__section {
+.under-hero__container {
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-direction: row;
     height: 100%;
-    margin-top: 70px;
-    margin-bottom: 70px;
-
-    @include for-tablet {  
-        margin-top: 50px;
-        margin-bottom: 50px;
-    }
 
     @media (max-width:767px) {
         flex-direction: column-reverse;
@@ -24,11 +17,11 @@
 }
 
 .under-hero__content {
-    width: 530px;
+    max-width: 530px;
+    width: 100%;
 
     @include for-laptop {  
         width: 380px;
-        margin-left: 20px;
     }
 
     @media (max-width:767px) {
@@ -86,17 +79,14 @@
 }
 
 .under-hero__img {
-    @include for-laptop {  
-        margin-right: 20px;
-    }
-
+    border-radius: 15px;
+    
     @media (max-width:1023px) {
         width: 300px;
         height: auto;
     }
 
     @media (max-width:767px) {
-        margin-right: 0px;
         width: 335px;
     }
 
@@ -105,36 +95,9 @@
     }
 }
 
-.under-hero__section--secondary {
+.under-hero__container--secondary {
     @media (max-width:767px) {
         flex-direction: column;
     }
 }
 
-.under-hero__content--secondary {
-    @include for-laptop {  
-        margin-right: 20px;
-        margin-left: 0px;
-    }
-
-    @include for-tablet {
-        height: auto;
-    }
-
-    @media (max-width:767px) {
-        margin-right: 0px;
-    }
-}
-
-
-.under-hero__img--secondary {
-
-    @include for-laptop {  
-        margin-right: 0px;
-        margin-left: 20px;
-    }
-
-    @media (max-width:767px) {
-        margin-left: 0px;
-    }
-}

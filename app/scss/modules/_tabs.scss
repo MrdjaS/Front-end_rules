@@ -1,11 +1,6 @@
 .tabs {
     height: auto;
 
-    @media (max-width:1280px) {
-        margin-left: 20px;
-        margin-right: 20px;
-    }
-
     .container {
         flex-direction: column;
         justify-content: flex-start;
@@ -28,16 +23,6 @@
         border-radius: 3px 3px 0px 0px;
         margin-right: -1px;
     }       
-}
-
-.tabs__section {
-    margin-top: 70px;
-    margin-bottom: 70px;
-
-    @include for-tablet { 
-        margin-top: 50px;
-        margin-bottom: 50px;
-    }
 }
 
 .tabs__title {
@@ -93,10 +78,10 @@
         color: $DarkGrey;
         background-color: $BackgroundGrey;
         border-radius: 3px 3px 0px 0px;
-        
         cursor: pointer;
 
         @include for-tablet { 
+            width: 120px;
             font-size: 1.8rem;
             line-height: 4rem;
         }
@@ -129,7 +114,8 @@
         display: inline-block;
         text-align: center;
         font-size: 1.6rem;
-        line-height: 4rem;
+        line-height: 2rem;
+        padding: 10px 0;
         max-width: 233px;
         width: 100%;
         background-color: $BackgroundGrey;
@@ -161,6 +147,7 @@
 
     @include for-mobile-L { 
         padding: 20px;
+        margin-top: 3px;
     }
 }
 

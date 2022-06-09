@@ -3,6 +3,10 @@
     background-color: $BackgroundGrey;
 
     @media (max-width:1280px) {
+        height: 750px;
+    }
+
+    @include for-tablet { 
         height: 667px;
     }
 
@@ -17,37 +21,34 @@
     overflow: hidden;
 
     @media (max-width:1280px) {
-        max-width: 728px;
+        max-width: 768px;
         width: 100%;
     }
 
     @media (max-width:767px) {
-        max-width: 350px;
+        max-width: 390px;
     }
 
     @include for-mobile-L { 
-        max-width: 335px; 
+        max-width: 375px; 
         justify-content: flex-start;
     }
 
-    @media (max-width:370px) {
-        max-width: 300px;
+    @media (max-width:374px) {
+        padding-left: 10px;
+        padding-right: 10px;
+        max-width: 320px;
     }
 }
 
 .slider__title {
     position: absolute;
-    top: 70px;
-
-    @media (max-width:1280px) {
-        top: 50px;
-    }
 }
 
 .slider__content {
     max-width: 1230px;
     width: 200%;
-    margin-top: 150px;
+    margin-top: 80px;
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
@@ -56,7 +57,7 @@
 
     @media (max-width:1280px) {
         max-width: 728px;
-        margin-top: 120px;
+        margin-top: 70px;
     }
 
     @media (max-width:767px) {
@@ -64,7 +65,7 @@
     }
 
     @include for-mobile-L { 
-        margin-top: 112px;
+        margin-top: 62px;
     }
 }
 
@@ -84,7 +85,7 @@
         margin-right: 20px;
     }
 
-    @media (max-width:370px) {
+    @media (max-width:374px) {
         max-width: 300px;
     }
 
@@ -93,6 +94,8 @@
     }
     
     img {
+        border-radius: 15px;
+
         @media (max-width:1280px) {
             width: 350px;
             height: auto;
@@ -102,7 +105,7 @@
             width: 335px;
         }
 
-        @media (max-width:370px) {
+        @media (max-width:374px) {
             width: 300px;
         }
     }
@@ -114,13 +117,13 @@
     letter-spacing: 0.3rem;
     color: $Orange;
     font-weight: 700;
-    margin-top: 44px;
+    margin-top: 42px;
     text-transform: uppercase;
 
     @include for-mobile-L { 
         font-size: 1.2rem;
         line-height: 1.2rem;
-        margin-top: 43px;
+        margin-top: 41px;
     }
 }
 
@@ -159,16 +162,12 @@
 
 .slider__button {
     position: absolute;
-    bottom: 68px;
+    bottom: 0;
     width: 80px;
     height: 80px;
     border: 1px solid $DarkGrey;
     border-radius: 40px;
     cursor: pointer;
-
-    @media (max-width:1280px) {
-        bottom: 50px;
-    }
 
     @include for-mobile-L { 
         width: 60px;
@@ -178,7 +177,6 @@
     .icon-keyboard_arrow_right::before {
         font-size: 3rem;
         color:$Orange;
-        
 
         @include for-mobile-L { 
             font-size: 2rem;
@@ -194,15 +192,27 @@
     transform: rotate(180deg);
 
     @include for-mobile-L { 
-        left: 0px;
+        left: 20px;
+    }
+
+    @media (max-width:374px) {
+        left: 10px;
     }
 }
 
 .slider__button--secondary {
     left: 90px;
 
+    @media (max-width:1280px) {
+        left: 110px;
+    }
+
     @include for-mobile-L { 
-        left: 70px;
+        left: 90px;
+    }
+
+    @media (max-width:374px) {
+        left: 80px;
     }
 }
 
@@ -220,6 +230,6 @@
 
 .slider__content--secondary {
     @media (max-width:767px) {
-        margin-top: 144px;
+        margin-top: 94px;
     }
 }

@@ -5,6 +5,7 @@ const autoprefixer = require('gulp-autoprefixer');
 const iconfont = require('gulp-iconfont');
 const iconfontCss = require('gulp-iconfont-css');
 const runTimestamp = Math.round(Date.now()/1000);
+const open = require('gulp-open');
 
 gulp.task('sass', function() {
     return gulp.src('app/scss/**/*.scss')
@@ -45,6 +46,15 @@ gulp.task('iconfont', function(){
         fontHeight: 1001
      }))
      .pipe(gulp.dest('app/fonts/'));
+});
+
+gulp.task('browser', function(){
+  var options = {
+    uri: 'localhost:3000',
+    app: 'chrome'
+  };
+  gulp.src('app/index.html')
+  .pipe(open(options));
 });
 
 

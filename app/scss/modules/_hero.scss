@@ -1,5 +1,5 @@
 .hero {
-    height: 610px;
+    padding: 163px 0;
     background-image: url('../images/hero.png');
     background-repeat: no-repeat;
     background-position: center;
@@ -12,7 +12,12 @@
 
     @include for-tablet {  
         background-image: url('../images/hero-small.png');
-        height: 500px;
+        padding: 121px 0;
+    }
+
+    @include for-mobile-L {  
+        padding: 62px 0 61px 0;
+        margin-top: 11px;
     }
 }
 
@@ -28,23 +33,10 @@
 }
 
 .hero__section {
-    width: 600px;
+    max-width: 600px;
+    width: 100%;
     padding: 30px 20px;
     background-color: rgba(0, 0, 0, 0.25);
-
-    @include for-laptop {  
-        margin-left: 20px; 
-    }
-
-    @media (max-width:635px) {
-        margin-right: 20px;
-    } 
-
-    @include for-mobile-L {  
-        width: 335px;
-        margin-left: 0px;
-        margin-right: 0px;
-    }
 
     @include for-mobile-S {  
         width: 300px;
@@ -58,8 +50,9 @@
     span {
         color: $LightGreen;
         font-size: 5rem;
-        line-height: 5.125rem;
+        line-height: 5.1rem;
         font-weight: 700;
+        height: 98px;
 
         @include for-tablet {  
             font-size: 4rem;
@@ -69,8 +62,7 @@
 
     @include for-tablet {  
         font-size: 4rem;
-        line-height: 4.1rem;
-        height: 98px;
+        line-height: 4.1rem; 
     }
 
     @media (max-width:635px) {
@@ -80,13 +72,12 @@
 
 .hero__text {
     color: $White;
-    padding-top: 30px;
+    padding-top: 27px;
     font-size: 2.2rem;
     line-height: 3.2rem;
     font-weight: 400;
 
     @include for-tablet {  
-        padding-top: 10px;
         font-size: 2rem;
         line-height: 3rem;
     }
