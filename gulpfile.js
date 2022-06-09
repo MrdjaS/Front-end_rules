@@ -5,13 +5,17 @@ const autoprefixer = require('gulp-autoprefixer');
 const iconfont = require('gulp-iconfont');
 const iconfontCss = require('gulp-iconfont-css');
 const runTimestamp = Math.round(Date.now()/1000);
-const open = require('gulp-open');
+const browsersync = require('browser-sync').create();
+
+//Sass compiler
 
 gulp.task('sass', function() {
     return gulp.src('app/scss/**/*.scss')
         .pipe(sass.sync().on('error', sass.logError))
         .pipe(gulp.dest('app/css'))
 });
+
+//Css lint
 
 gulp.task('lint-css', function lintCssTask() {
     return gulp.src('app/css/**/*.css')
@@ -22,6 +26,8 @@ gulp.task('lint-css', function lintCssTask() {
        }));
 });
 
+//Autoprefixer 
+
 gulp.task('autoprefix', function() {
     return gulp.src('app/css/**/*.css')
         .pipe(autoprefixer({
@@ -29,6 +35,8 @@ gulp.task('autoprefix', function() {
         }))
         .pipe(gulp.dest('app/css'));
 });
+
+//Iconfont
 
 const fontName = 'Icons';
  
@@ -48,15 +56,18 @@ gulp.task('iconfont', function(){
      .pipe(gulp.dest('app/fonts/'));
 });
 
-gulp.task('browser', function(){
-  var options = {
-    uri: 'localhost:3000',
-    app: 'chrome'
-  };
-  gulp.src('app/index.html')
-  .pipe(open(options));
+//Browsersync
+
+gulp.task('start', function(cb){
+  browsersync.init({
+    server: {
+      baseDir: './app' 
+    }
+  });
+  cb();
 });
 
+//Watch task
 
 gulp.task('watch', function() {
     gulp.watch('app/scss/**/*.scss', gulp.series('sass'));

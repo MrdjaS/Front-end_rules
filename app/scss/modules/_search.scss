@@ -7,7 +7,10 @@
     height: 100%;
     background-color: $White;
     text-align: center;
-    
+}
+
+.search-overlay-active {
+    display: flex;
 }
 
 .search-overlay__form {

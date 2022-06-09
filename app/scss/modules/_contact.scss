@@ -185,18 +185,3 @@
 .contact__label--primary {
     margin-top: 5px;
 }
-
-.contact__button {
-    background-color: transparent;
-    box-shadow:  0 0 0 1px $White;
-
-    &:hover {
-        color: $Green;
-        background-color: $White;
-        box-shadow:  0 0 0 1px $White;
-    }
-
-    @include for-mobile-L { 
-        padding: 11px 19.5px;
-    }
-}

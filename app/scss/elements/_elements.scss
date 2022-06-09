@@ -3,12 +3,21 @@
     font-size: 2rem;
     line-height: 3rem;
     font-weight: 700;
-    color: $White;
     border: none;
-    background-color: $Orange;
     border-radius: 5px;
     cursor: pointer;
     transition: 0.3s;
+
+    @include for-mobile-L {  
+        font-size: 1.8rem;
+        line-height: 2.8rem;
+        padding: 10.8px 23px 11.2px 23px;
+    }
+}
+
+.button--primary {
+    color: $White;
+    background-color: $Orange;
 
     &:hover {
         color: $Orange;
@@ -19,7 +28,22 @@
     @include for-mobile-L {  
         font-size: 1.8rem;
         line-height: 2.8rem;
-        padding: 11.5px 23px 10.5px 23px;
+    }
+}
+
+.button--secondary {
+    background-color: transparent;
+    box-shadow:  0 0 0 1px $White;
+    color: $White;
+
+    &:hover {
+        color: $Green;
+        background-color: $White;
+        box-shadow:  0 0 0 1px $White;
+    }
+
+    @include for-mobile-L { 
+        padding: 11px 19.5px;
     }
 }
 

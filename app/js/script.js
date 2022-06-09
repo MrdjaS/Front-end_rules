@@ -1,36 +1,29 @@
 //Search
 
-const searchBtn = document.querySelectorAll('.search-btn');
-const searchOverlay = document.getElementById('search-overlay');
-const closeBtn = document.querySelectorAll('.close-btn');
+const searchBtn = document.querySelector('.search-btn');
+const searchOverlay = document.querySelector('.search-overlay');
+const closeBtn = document.querySelector('.close-btn');
 
-searchBtn.forEach(item => {
-    item.addEventListener('click', (e) => {
-        e.preventDefault();
-        searchOverlay.style.display = 'flex';
-    })
+searchBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    searchOverlay.classList.toggle('search-overlay-active');
 });
 
-closeBtn.forEach(item => {
-    item.addEventListener('click', (e) => {
-        e.preventDefault();
-        searchOverlay.style.display = 'none';
-    })
+closeBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    searchOverlay.classList.toggle('search-overlay-active');
 });
 
-//Hamburger 
+//Hamburger menu
 
 const hamburger = document.querySelector('.navbar__hamburger');
 const mainMenu = document.querySelector('.navbar__menu');
-const search = document.querySelector('.navbar__search');
 const closeBtnMobile = document.querySelector('.navbar__close');
-const width = window.innerWidth;
-const expand = document.querySelector('.navbar__item--expand');
 
 hamburger.addEventListener('click',() => {
     hamburger.classList.toggle('active');
     mainMenu.classList.toggle('active');
-    search.style.display = 'none';
+    searchBtn.style.display = 'none';
     hamburger.style.display = 'none';
     closeBtnMobile.style.display = 'inline-block';
 });
@@ -38,7 +31,7 @@ hamburger.addEventListener('click',() => {
 closeBtnMobile.addEventListener('click',() => {
     hamburger.classList.toggle('active');
     mainMenu.classList.toggle('active');
-    search.style.display = 'inline-block';
+    searchBtn.style.display = 'inline-block';
     hamburger.style.display = 'inline-block';
     closeBtnMobile.style.display = 'none';
 });
@@ -51,8 +44,7 @@ const btnNext = document.getElementById('btn-next');
 const card = document.querySelector('.slider__card--primary');
 const cards = document.querySelectorAll('.slider__card--primary');
 let cardWidth = card.offsetWidth;
-let cardDimensions = card.currentStyle || window.getComputedStyle(card);
-let cardMargin = parseInt(cardDimensions.marginRight);
+let cardMargin = parseInt((card.currentStyle || window.getComputedStyle(card)).marginRight);
 let windowWidth = window.innerWidth;
 let numOfSlides = 0;
 
@@ -88,43 +80,42 @@ const sliderSecond = document.getElementById('slider-content--secondary');
 const btnPrevSliderSecond = document.getElementById('btn-prev-second');
 const btnNextSliderSecond = document.getElementById('btn-next-second');
 
-
-let slideNumberSecond = 0;
+let secondSliderNumber = 0;
 
 btnNextSliderSecond.addEventListener('click',() => {
-    if (slideNumberSecond < numOfSlides) {
-        slideNumberSecond++;
+    if (secondSliderNumber < numOfSlides) {
+        secondSliderNumber++;
     } else {
-      return slideNumberSecond;
+      return secondSliderNumber;
     }
-    sliderSecond.style.transform = `translateX(-${slideNumberSecond*(cardWidth+cardMargin)}px)`;
+    sliderSecond.style.transform = `translateX(-${secondSliderNumber*(cardWidth+cardMargin)}px)`;
 });
   
 btnPrevSliderSecond.addEventListener('click',() => {
-    if (slideNumberSecond > 0) {
-        slideNumberSecond--;
+    if (secondSliderNumber > 0) {
+        secondSliderNumber--;
     } else {
-      return slideNumberSecond;
+      return secondSliderNumber;
     }
-    sliderSecond.style.transform = `translateX(-${slideNumberSecond*(cardWidth+cardMargin)}px)`;
+    sliderSecond.style.transform = `translateX(-${secondSliderNumber*(cardWidth+cardMargin)}px)`;
 });
 
 
-// Dropdown 
+// Dropdown in Navbar on mobile devices
 
-const dropDownFirstItem = document.getElementById('navbar-dropdown-first');
-const dropDownSecondItem = document.getElementById('navbar-dropdown-second');
+const dropdownFirstItem = document.getElementById('navbar-dropdown-first');
+const dropdownSecondItem = document.getElementById('navbar-dropdown-second');
 
 const arrowFirstItem = document.getElementById('navbar-arrow');
 const arrowSecondItem = document.getElementById('navbar-arrow-second');
 
-const dropDownFirstList = document.getElementById('navbar-dropdown-first-list');
-const dropDownSecondList = document.getElementById('navbar-dropdown-second-list');
+const dropdownFirstList = document.getElementById('navbar-dropdown-first-list');
+const dropdownSecondList = document.getElementById('navbar-dropdown-second-list');
 
 let countFirst = 0;
 
-dropDownFirstItem.addEventListener('click', () => {
-    dropDownFirstList.classList.toggle('navbar__dropdown--active');
+dropdownFirstItem.addEventListener('click', () => {
+    dropdownFirstList.classList.toggle('navbar__dropdown--active');
     countFirst++;
     if(countFirst%2 !== 0 || countFirst === 0) {
         arrowFirstItem.style.transform = `rotate(90deg)`;
@@ -135,8 +126,8 @@ dropDownFirstItem.addEventListener('click', () => {
 
 let countSecond = 0;
 
-dropDownSecondItem.addEventListener('click', () => {
-    dropDownSecondList.classList.toggle('navbar__dropdown--active');
+dropdownSecondItem.addEventListener('click', () => {
+    dropdownSecondList.classList.toggle('navbar__dropdown--active');
     countSecond++;
     if(countSecond%2 !== 0 || countSecond === 0) {
         arrowSecondItem.style.transform = `rotate(90deg)`;
@@ -146,71 +137,42 @@ dropDownSecondItem.addEventListener('click', () => {
 });
 
 
-// Tabs
+// Tabs section
+
+
 let tabsText = [...document.querySelectorAll('.tabs__text')];
 const tabsMenu = document.querySelector('.tabs__desktop');
 const tabsArchivesButton = document.querySelector('.tabs__responsive');
-
+const navTabs = [... document.querySelectorAll('.tab-nav')];
 
 tabsArchivesButton.addEventListener('click', () => {
     tabsMenu.classList.toggle('active');
 });
 
-
-document.querySelector('.tab-nav-1').onclick = function() { 
-    for(let i = 0; i < tabsText.length; i++) {
-        tabsText[i].classList.remove('active');
-    }
-    tabsText[0].classList.toggle('active');
-    document.querySelector('.tabs__selected-option').textContent = '2021';
-};
-document.querySelector('.tab-nav-2').onclick = function() { 
-    for(let i = 0; i < tabsText.length; i++) {
-        tabsText[i].classList.remove('active');
-    }
-    tabsText[1].classList.toggle('active');
-    document.querySelector('.tabs__selected-option').textContent = '2020';
-};
-document.querySelector('.tab-nav-3').onclick = function() { 
-    for(let i = 0; i < tabsText.length; i++) {
-        tabsText[i].classList.remove('active')
-    }
-    tabsText[2].classList.toggle('active');
-    document.querySelector('.tabs__selected-option').textContent = '2019';
-};
-document.querySelector('.tab-nav-4').onclick = function() { 
-    for(let i = 0; i < tabsText.length; i++) {
-        tabsText[i].classList.remove('active')
-    }
-    tabsText[3].classList.toggle('active');
-    document.querySelector('.tabs__selected-option').textContent = '2018';
-};
-
+for(let i = 0; i < navTabs.length; i++) {
+    navTabs[i].onclick = function() { 
+        for(let j = 0; j < tabsText.length; j++) {
+            tabsText[j].classList.remove('active');
+        }
+        tabsText[i].classList.toggle('active');
+        document.querySelector('.tabs__selected-option').textContent = `${2021 - i}`;
+    };
+}
 
 
 //Expand text section //
+
+
 let iconRemove = [... document.querySelectorAll('.icon-remove')];
 let iconAdd = [... document.querySelectorAll('.icon-add')];
 let expandText = [... document.querySelectorAll('.expand__text')];
-let expandButtonFirst = document.getElementById('expand__heading-first');
-let expandButtonSecond = document.getElementById('expand__heading-second');
-let expandButtonThird = document.getElementById('expand__heading-third');
 
+let expandButton = [... document.querySelectorAll('.expand__heading')];
 
-expandButtonFirst.addEventListener('click', () => {
-        iconRemove[0].classList.toggle('icon--active');
-        iconAdd[0].classList.toggle('icon--active');
-        expandText[0].classList.toggle('expand__text--active');
-});
-
-expandButtonSecond.addEventListener('click', () => {
-    iconRemove[1].classList.toggle('icon--active');
-    iconAdd[1].classList.toggle('icon--active');
-    expandText[1].classList.toggle('expand__text--active');
-});
-
-expandButtonThird.addEventListener('click', () => {
-    iconRemove[2].classList.toggle('icon--active');
-    iconAdd[2].classList.toggle('icon--active');
-    expandText[2].classList.toggle('expand__text--active');
-});
+for(let i = 0; i < expandButton.length; i++) {
+    expandButton[i].addEventListener('click', () => {
+        iconRemove[i].classList.toggle('icon--active');
+        iconAdd[i].classList.toggle('icon--active');
+        expandText[i].classList.toggle('expand__text--active');
+    });
+}
