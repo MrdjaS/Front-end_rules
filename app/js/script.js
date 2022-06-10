@@ -4,14 +4,11 @@ const searchBtn = document.querySelector('.search-btn');
 const searchOverlay = document.querySelector('.search-overlay');
 const closeBtn = document.querySelector('.close-btn');
 
-searchBtn.addEventListener('click', (e) => {
-    e.preventDefault();
-    searchOverlay.classList.toggle('search-overlay-active');
-});
-
-closeBtn.addEventListener('click', (e) => {
-    e.preventDefault();
-    searchOverlay.classList.toggle('search-overlay-active');
+[searchBtn, closeBtn].forEach(function(btn) {
+    btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        searchOverlay.classList.toggle('search-overlay-active');
+    })
 });
 
 //Hamburger menu
@@ -20,20 +17,13 @@ const hamburger = document.querySelector('.navbar__hamburger');
 const mainMenu = document.querySelector('.navbar__menu');
 const closeBtnMobile = document.querySelector('.navbar__close');
 
-hamburger.addEventListener('click',() => {
-    hamburger.classList.toggle('active');
-    mainMenu.classList.toggle('active');
-    searchBtn.style.display = 'none';
-    hamburger.style.display = 'none';
-    closeBtnMobile.style.display = 'inline-block';
-});
-
-closeBtnMobile.addEventListener('click',() => {
-    hamburger.classList.toggle('active');
-    mainMenu.classList.toggle('active');
-    searchBtn.style.display = 'inline-block';
-    hamburger.style.display = 'inline-block';
-    closeBtnMobile.style.display = 'none';
+[hamburger, closeBtnMobile].forEach(function(item){
+    item.addEventListener('click',() => {
+        mainMenu.classList.toggle('active');
+        searchBtn.classList.toggle('active--hamburger');
+        hamburger.classList.toggle('active--hamburger');
+        closeBtnMobile.classList.toggle('active--hamburger');
+    })
 });
 
 //First Slider
@@ -47,14 +37,13 @@ let cardWidth = card.offsetWidth;
 let cardMargin = parseInt((card.currentStyle || window.getComputedStyle(card)).marginRight);
 let windowWidth = window.innerWidth;
 let numOfSlides = 0;
+let slideNumber = 0;
 
 if (windowWidth < 768) {
     numOfSlides = cards.length - 1;
 }  else {
     numOfSlides = cards.length - 2;
-}
-
-let slideNumber = 0;
+};
 
 btnNext.addEventListener('click',() => {
     if (slideNumber < numOfSlides) {
@@ -112,29 +101,24 @@ const arrowSecondItem = document.getElementById('navbar-arrow-second');
 const dropdownFirstList = document.getElementById('navbar-dropdown-first-list');
 const dropdownSecondList = document.getElementById('navbar-dropdown-second-list');
 
-let countFirst = 0;
-
-dropdownFirstItem.addEventListener('click', () => {
-    dropdownFirstList.classList.toggle('navbar__dropdown--active');
-    countFirst++;
-    if(countFirst%2 !== 0 || countFirst === 0) {
-        arrowFirstItem.style.transform = `rotate(90deg)`;
+const dropDownFn = (a, b) => {
+    let count = 0;
+    a.classList.toggle('navbar__dropdown--active');
+    count++;
+    if(count%2 !== 0 || count === 0) {
+        b.classList.toggle('navbar__arrow--active');
     } else {
-        arrowFirstItem.style.transform = `rotate(0deg)`;
+        b.classList.toggle('navbar__arrow--deactive');
     }
-});
+}
 
-let countSecond = 0;
+dropdownFirstItem.addEventListener('click', function() {
+    dropDownFn(dropdownFirstList, arrowFirstItem);
+}, false);
 
-dropdownSecondItem.addEventListener('click', () => {
-    dropdownSecondList.classList.toggle('navbar__dropdown--active');
-    countSecond++;
-    if(countSecond%2 !== 0 || countSecond === 0) {
-        arrowSecondItem.style.transform = `rotate(90deg)`;
-    } else {
-        arrowSecondItem.style.transform = `rotate(0deg)`;
-    }
-});
+dropdownSecondItem.addEventListener('click', function() {
+    dropDownFn(dropdownSecondList, arrowSecondItem);
+}, false);
 
 
 // Tabs section
@@ -144,6 +128,7 @@ let tabsText = [...document.querySelectorAll('.tabs__text')];
 const tabsMenu = document.querySelector('.tabs__desktop');
 const tabsArchivesButton = document.querySelector('.tabs__responsive');
 const navTabs = [... document.querySelectorAll('.tab-nav')];
+const tabLabels = [... document.querySelectorAll('.tab-nav-label')];
 
 tabsArchivesButton.addEventListener('click', () => {
     tabsMenu.classList.toggle('active');
@@ -155,7 +140,7 @@ for(let i = 0; i < navTabs.length; i++) {
             tabsText[j].classList.remove('active');
         }
         tabsText[i].classList.toggle('active');
-        document.querySelector('.tabs__selected-option').textContent = `${2021 - i}`;
+        document.querySelector('.tabs__selected-option').textContent = tabLabels[i].innerHTML;
     };
 }
 

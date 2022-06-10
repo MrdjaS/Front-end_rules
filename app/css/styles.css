@@ -600,7 +600,6 @@ header {
 }
 
 .navbar__close {
-  display: none;
   cursor: pointer;
 }
 @media (max-width: 768px) {
@@ -621,6 +620,18 @@ header {
 
 .navbar__dropdown--active {
   display: flex;
+}
+
+.navbar__arrow--active {
+  transform: rotate(90deg);
+}
+
+.navbar__arrow--deactive {
+  transform: rotate(0deg);
+}
+
+.active--hamburger {
+  display: none;
 }
 
 .search-overlay {

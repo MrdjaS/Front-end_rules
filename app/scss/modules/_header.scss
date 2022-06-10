@@ -359,7 +359,6 @@ header {
 }
 
 .navbar__close {
-    display: none;
     cursor: pointer;
 
     @include for-tablet {
@@ -377,4 +376,16 @@ header {
 
 .navbar__dropdown--active {
     display: flex;
+}
+
+.navbar__arrow--active {
+    transform: rotate(90deg);
+}
+
+.navbar__arrow--deactive {
+    transform: rotate(0deg);
+}
+
+.active--hamburger {
+    display: none;
 }
