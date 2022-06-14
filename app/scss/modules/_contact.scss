@@ -28,8 +28,10 @@
 }
 
 .contact__row--primary {
+    margin-top: 15px;
+
     &:last-of-type {
-        margin-top: 13px;
+        margin-top: 10px;
     }
 }
 
@@ -38,7 +40,7 @@
 }
 
 .contact__row--terniary {
-    margin-top: 20px;
+    margin-top: 17px;
 }
 
 .contact__row--quaternary {
@@ -113,9 +115,14 @@
 .contact__textarea {
     width: 100%;
     height: 180px;
-    padding-top: 20px;
+    padding-top: 15px;
     padding-left: 18px;
     margin-top: 10px;
+
+    @include for-tablet {
+        padding-top: 25px;
+        padding-left: 12px;
+    }
 
     @include for-mobile-L {
         height: 160px; 

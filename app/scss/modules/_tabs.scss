@@ -11,7 +11,7 @@
 .tabs__selected-option {
     display: none;
 
-    @media (max-width:570px) {
+    @media (max-width:528px) {
         display: inline-block;
         text-align: center;
         font-size: 1.6rem;
@@ -37,7 +37,7 @@
     list-style-type: none;
     display: flex;
 
-    @media (max-width:570px) {
+    @media (max-width:528px) {
         display: none;
         margin-top: 2px;
     }
@@ -45,7 +45,7 @@
     li {
         margin-right: 2px;
 
-        @media (max-width:570px) {
+        @media (max-width:528px) {
             margin-right: 0px;
         }
     }
@@ -59,7 +59,7 @@
             color: $White;
         }
 
-        @media (max-width:570px) {
+        @media (max-width:528px) {
             &:checked + label {
                 font-weight: 700;
                 color: $DarkGrey;
@@ -86,7 +86,7 @@
             line-height: 4rem;
         }
 
-        @media (max-width:570px) {
+        @media (max-width:528px) {
             border-radius: 0;
             width: 335px;
         }
@@ -110,7 +110,7 @@
 .tabs__responsive {
     display: none;
 
-    @media (max-width:570px) {
+    @media (max-width:528px) {
         display: inline-block;
         text-align: center;
         font-size: 1.6rem;

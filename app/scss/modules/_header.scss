@@ -177,8 +177,7 @@ header {
 
         @media (min-width:769px) {
             &:hover {
-                background-color: $Grey;
-                
+                background-color: $Grey;   
             }
         
             &:hover ~ .navbar__dropdown{
@@ -212,6 +211,13 @@ header {
 
     @include for-laptop {
         left: 40px;
+    }
+
+    @media (min-width:769px) {
+        &:hover {
+            visibility: visible;
+            opacity: 1;
+        }
     }
 
     @include for-tablet {
